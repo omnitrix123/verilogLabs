@@ -1,0 +1,87 @@
+#! /usr/bin/vvp
+:ivl_version "10.3 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x557051a610d0 .scope module, "gateTestbench" "gateTestbench" 2 1;
+ .timescale 0 0;
+v0x557051aaf730_0 .var "in1", 0 0;
+v0x557051aaf7f0_0 .var "in2", 0 0;
+v0x557051aaf890_0 .net "outAnd", 0 0, L_0x557051a871d0;  1 drivers
+v0x557051aaf930_0 .net "outExnor", 0 0, L_0x557051ab04d0;  1 drivers
+v0x557051aaf9d0_0 .net "outExor", 0 0, L_0x557051ab0350;  1 drivers
+v0x557051aafa70_0 .net "outNand", 0 0, L_0x557051ab0030;  1 drivers
+v0x557051aafb40_0 .net "outNor", 0 0, L_0x557051ab0140;  1 drivers
+v0x557051aafc10_0 .net "outNot", 0 0, L_0x557051ab0290;  1 drivers
+v0x557051aafce0_0 .net "outOr", 0 0, L_0x557051a87240;  1 drivers
+S_0x557051a61250 .scope module, "G1" "gates" 2 5, 3 1 0, S_0x557051a610d0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "in1"
+    .port_info 1 /INPUT 1 "in2"
+    .port_info 2 /OUTPUT 1 "outAnd"
+    .port_info 3 /OUTPUT 1 "outOr"
+    .port_info 4 /OUTPUT 1 "outNot"
+    .port_info 5 /OUTPUT 1 "outNand"
+    .port_info 6 /OUTPUT 1 "outNor"
+    .port_info 7 /OUTPUT 1 "outExor"
+    .port_info 8 /OUTPUT 1 "outExnor"
+L_0x557051a871d0 .functor AND 1, v0x557051aaf730_0, v0x557051aaf7f0_0, C4<1>, C4<1>;
+L_0x557051a87240 .functor OR 1, v0x557051aaf730_0, v0x557051aaf7f0_0, C4<0>, C4<0>;
+L_0x557051aafea0 .functor AND 1, v0x557051aaf730_0, v0x557051aaf7f0_0, C4<1>, C4<1>;
+L_0x557051ab0030 .functor NOT 1, L_0x557051aafea0, C4<0>, C4<0>, C4<0>;
+L_0x557051ab00d0 .functor OR 1, v0x557051aaf730_0, v0x557051aaf7f0_0, C4<0>, C4<0>;
+L_0x557051ab0140 .functor NOT 1, L_0x557051ab00d0, C4<0>, C4<0>, C4<0>;
+L_0x557051ab0290 .functor NOT 1, v0x557051aaf730_0, C4<0>, C4<0>, C4<0>;
+L_0x557051ab0350 .functor XOR 1, v0x557051aaf730_0, v0x557051aaf7f0_0, C4<0>, C4<0>;
+L_0x557051ab0460 .functor XOR 1, v0x557051aaf730_0, v0x557051aaf7f0_0, C4<0>, C4<0>;
+L_0x557051ab04d0 .functor NOT 1, L_0x557051ab0460, C4<0>, C4<0>, C4<0>;
+v0x557051a874d0_0 .net *"_s16", 0 0, L_0x557051ab0460;  1 drivers
+v0x557051a87570_0 .net *"_s4", 0 0, L_0x557051aafea0;  1 drivers
+v0x557051aaee40_0 .net *"_s8", 0 0, L_0x557051ab00d0;  1 drivers
+v0x557051aaef00_0 .net "in1", 0 0, v0x557051aaf730_0;  1 drivers
+v0x557051aaefc0_0 .net "in2", 0 0, v0x557051aaf7f0_0;  1 drivers
+v0x557051aaf0d0_0 .net "outAnd", 0 0, L_0x557051a871d0;  alias, 1 drivers
+v0x557051aaf190_0 .net "outExnor", 0 0, L_0x557051ab04d0;  alias, 1 drivers
+v0x557051aaf250_0 .net "outExor", 0 0, L_0x557051ab0350;  alias, 1 drivers
+v0x557051aaf310_0 .net "outNand", 0 0, L_0x557051ab0030;  alias, 1 drivers
+v0x557051aaf3d0_0 .net "outNor", 0 0, L_0x557051ab0140;  alias, 1 drivers
+v0x557051aaf490_0 .net "outNot", 0 0, L_0x557051ab0290;  alias, 1 drivers
+v0x557051aaf550_0 .net "outOr", 0 0, L_0x557051a87240;  alias, 1 drivers
+    .scope S_0x557051a610d0;
+T_0 ;
+    %vpi_call 2 9 "$monitor", $time, " in1=%b,in2=%b,outAnd=%b,outOr=%b,outNot=%b,outNand=%b,outNor=%b,outExor=%b,outExnor=%b", v0x557051aaf730_0, v0x557051aaf7f0_0, v0x557051aaf890_0, v0x557051aafce0_0, v0x557051aafc10_0, v0x557051aafa70_0, v0x557051aafb40_0, v0x557051aaf9d0_0, v0x557051aaf930_0 {0 0 0};
+    %vpi_call 2 10 "$dumpfile", "gatedump.vcd" {0 0 0};
+    %vpi_call 2 11 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x557051a610d0 {0 0 0};
+    %delay 2, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x557051aaf730_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x557051aaf7f0_0, 0, 1;
+    %delay 2, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x557051aaf730_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x557051aaf7f0_0, 0, 1;
+    %delay 2, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x557051aaf730_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x557051aaf7f0_0, 0, 1;
+    %delay 2, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x557051aaf730_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x557051aaf7f0_0, 0, 1;
+    %delay 2, 0;
+    %vpi_call 2 17 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "gateTestbench.v";
+    "gates.v";

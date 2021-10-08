@@ -1,0 +1,72 @@
+$date
+	Thu Sep 23 21:08:46 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module testbench $end
+$var wire 1 ! sum $end
+$var wire 1 " cout $end
+$var reg 1 # a $end
+$var reg 1 $ b $end
+$var reg 1 % c $end
+$scope module FA $end
+$var wire 1 # a $end
+$var wire 1 $ b $end
+$var wire 1 " carry $end
+$var wire 1 % cin $end
+$var wire 1 ! sum $end
+$var wire 1 & s1 $end
+$var wire 1 ' c2 $end
+$var wire 1 ( c1 $end
+$scope module H1 $end
+$var wire 1 ( c $end
+$var wire 1 # p $end
+$var wire 1 $ q $end
+$var wire 1 & s $end
+$upscope $end
+$scope module H2 $end
+$var wire 1 ' c $end
+$var wire 1 & p $end
+$var wire 1 % q $end
+$var wire 1 ! s $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x(
+x'
+x&
+x%
+x$
+x#
+x"
+x!
+$end
+#5
+0"
+1!
+0'
+0&
+0(
+1%
+0$
+0#
+#10
+1"
+0!
+1'
+1&
+1$
+#15
+1!
+0'
+0&
+1(
+1#
+#20

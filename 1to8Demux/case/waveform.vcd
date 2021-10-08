@@ -1,0 +1,63 @@
+$date
+	Fri Sep 24 09:31:08 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module testbench $end
+$var wire 1 ! out $end
+$var reg 1 " A $end
+$var reg 3 # S [2:0] $end
+$scope module S1 $end
+$var wire 1 " a $end
+$var wire 3 $ select [2:0] $end
+$var reg 8 % out [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx %
+bx $
+bx #
+x"
+x!
+$end
+#5
+1!
+bx1 %
+b0 #
+b0 $
+1"
+#10
+bx11 %
+b1 #
+b1 $
+#15
+bx111 %
+b10 #
+b10 $
+#20
+bx1111 %
+b11 #
+b11 $
+#25
+bx11111 %
+b100 #
+b100 $
+#30
+bx111111 %
+b101 #
+b101 $
+#35
+bx1111111 %
+b110 #
+b110 $
+#40
+b11111111 %
+b111 #
+b111 $
+#45

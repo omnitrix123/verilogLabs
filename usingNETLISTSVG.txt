@@ -1,0 +1,22 @@
+Generating input_json_file with Yosys
+
+Yosys from Clifford Wolf can be used to generate the input_json_file using the write_json command.
+
+Unless you are doing something special you will want to use the prep command. Some examples are provided below and you can find some runnable examples which go from Verilog to diagrams in the examples directory (with example Makefile).
+Generate top level diagram
+
+This command will generate a diagram of the top module with all the inner modules shown as boxes.
+
+>> yosys -p "prep -top my_top_module; write_json output.json" input.v
+
+Generate logic diagram
+
+You can give it the -flatten argument to the prep command if you want Yosys to convert everything into low level logic. Only basic logic cells and black boxes will exist after flattening.
+
+>> yosys -p "prep -top my_top_module -flatten; write_json output.json" input.v
+
+Generate AND (or not) and inverter (NOT) diagram
+
+It is also frequently common that you want to create a diagram only using AND and NOT (or NAND and NOT) cells. (This is called an AIG.) This can be done with Yosys' aigmap command.
+
+>> yosys -p "prep -top my_top_module; aigmap; write_json output.json" input.v

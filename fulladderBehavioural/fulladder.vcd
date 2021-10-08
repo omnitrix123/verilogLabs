@@ -1,0 +1,46 @@
+$date
+	Thu Sep  9 12:16:56 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module testbench $end
+$var wire 1 ! sum $end
+$var wire 1 " cout $end
+$var reg 1 # a $end
+$var reg 1 $ b $end
+$var reg 1 % c $end
+$scope module FA $end
+$var wire 1 # a $end
+$var wire 1 $ b $end
+$var wire 1 % c $end
+$var wire 1 " cout $end
+$var wire 1 ! sum $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x%
+x$
+x#
+x"
+x!
+$end
+#5
+0"
+1%
+0!
+0$
+0#
+#10
+1"
+1!
+1$
+#15
+0!
+1#
+#20

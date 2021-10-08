@@ -1,0 +1,83 @@
+#! /usr/bin/vvp
+:ivl_version "10.3 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x55e26ae8e030 .scope module, "testbench" "testbench" 2 1;
+ .timescale 0 0;
+v0x55e26aedab20_0 .var "a", 0 0;
+v0x55e26aedac10_0 .var "b", 0 0;
+v0x55e26aedad20_0 .var "c", 0 0;
+v0x55e26aedae10_0 .net "cout", 0 0, L_0x55e26aedb380;  1 drivers
+v0x55e26aedaeb0_0 .net "sum", 0 0, L_0x55e26aedb120;  1 drivers
+S_0x55e26ae8e1b0 .scope module, "FA" "fulladder" 2 4, 3 11 0, S_0x55e26ae8e030;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a"
+    .port_info 1 /INPUT 1 "b"
+    .port_info 2 /INPUT 1 "cin"
+    .port_info 3 /OUTPUT 1 "sum"
+    .port_info 4 /OUTPUT 1 "carry"
+L_0x55e26aedb380 .functor OR 1, L_0x55e26aedb260, L_0x55e26aedb060, C4<0>, C4<0>;
+v0x55e26aeda470_0 .net "a", 0 0, v0x55e26aedab20_0;  1 drivers
+v0x55e26aeda530_0 .net "b", 0 0, v0x55e26aedac10_0;  1 drivers
+v0x55e26aeda600_0 .net "c1", 0 0, L_0x55e26aedb060;  1 drivers
+v0x55e26aeda700_0 .net "c2", 0 0, L_0x55e26aedb260;  1 drivers
+v0x55e26aeda7d0_0 .net "carry", 0 0, L_0x55e26aedb380;  alias, 1 drivers
+v0x55e26aeda8c0_0 .net "cin", 0 0, v0x55e26aedad20_0;  1 drivers
+v0x55e26aeda960_0 .net "s1", 0 0, L_0x55e26aedaff0;  1 drivers
+v0x55e26aedaa50_0 .net "sum", 0 0, L_0x55e26aedb120;  alias, 1 drivers
+S_0x55e26aec59e0 .scope module, "H1" "halfadder" 3 16, 3 1 0, S_0x55e26ae8e1b0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "p"
+    .port_info 1 /INPUT 1 "q"
+    .port_info 2 /OUTPUT 1 "s"
+    .port_info 3 /OUTPUT 1 "c"
+L_0x55e26aedaff0 .functor XOR 1, v0x55e26aedab20_0, v0x55e26aedac10_0, C4<0>, C4<0>;
+L_0x55e26aedb060 .functor AND 1, v0x55e26aedab20_0, v0x55e26aedac10_0, C4<1>, C4<1>;
+v0x55e26aec5bd0_0 .net "c", 0 0, L_0x55e26aedb060;  alias, 1 drivers
+v0x55e26aed9bf0_0 .net "p", 0 0, v0x55e26aedab20_0;  alias, 1 drivers
+v0x55e26aed9cb0_0 .net "q", 0 0, v0x55e26aedac10_0;  alias, 1 drivers
+v0x55e26aed9d50_0 .net "s", 0 0, L_0x55e26aedaff0;  alias, 1 drivers
+S_0x55e26aed9e90 .scope module, "H2" "halfadder" 3 17, 3 1 0, S_0x55e26ae8e1b0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "p"
+    .port_info 1 /INPUT 1 "q"
+    .port_info 2 /OUTPUT 1 "s"
+    .port_info 3 /OUTPUT 1 "c"
+L_0x55e26aedb120 .functor XOR 1, L_0x55e26aedaff0, v0x55e26aedad20_0, C4<0>, C4<0>;
+L_0x55e26aedb260 .functor AND 1, L_0x55e26aedaff0, v0x55e26aedad20_0, C4<1>, C4<1>;
+v0x55e26aeda0f0_0 .net "c", 0 0, L_0x55e26aedb260;  alias, 1 drivers
+v0x55e26aeda1b0_0 .net "p", 0 0, L_0x55e26aedaff0;  alias, 1 drivers
+v0x55e26aeda270_0 .net "q", 0 0, v0x55e26aedad20_0;  alias, 1 drivers
+v0x55e26aeda340_0 .net "s", 0 0, L_0x55e26aedb120;  alias, 1 drivers
+    .scope S_0x55e26ae8e030;
+T_0 ;
+    %vpi_call 2 7 "$dumpfile", "fulladder.vcd" {0 0 0};
+    %vpi_call 2 8 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x55e26ae8e030 {0 0 0};
+    %vpi_call 2 9 "$monitor", $time, " a=%b,b=%b,c=%b,sum=%b,cout=%b ", v0x55e26aedab20_0, v0x55e26aedac10_0, v0x55e26aedad20_0, v0x55e26aedaeb0_0, v0x55e26aedae10_0 {0 0 0};
+    %delay 5, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55e26aedab20_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55e26aedac10_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55e26aedad20_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55e26aedac10_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55e26aedab20_0, 0, 1;
+    %delay 5, 0;
+    %vpi_call 2 13 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "testbench.v";
+    "fulladder.v";

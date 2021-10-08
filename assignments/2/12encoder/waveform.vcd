@@ -1,0 +1,35 @@
+$date
+	Wed Sep 15 19:34:14 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module testbench $end
+$var wire 1 ! out $end
+$var reg 1 " i0 $end
+$var reg 1 # i1 $end
+$scope module E1 $end
+$var wire 1 " i0 $end
+$var wire 1 # i1 $end
+$var wire 1 ! out $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x#
+x"
+x!
+$end
+#5
+0!
+1#
+0"
+#10
+1!
+0#
+1"
+#15

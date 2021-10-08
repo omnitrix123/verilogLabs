@@ -1,0 +1,61 @@
+#! /usr/bin/vvp
+:ivl_version "10.3 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x563d116421a0 .scope module, "testbench" "testbench" 2 1;
+ .timescale 0 0;
+v0x563d116751c0_0 .var "a", 0 0;
+v0x563d11675280_0 .var "b", 0 0;
+v0x563d11675350_0 .net "cout", 0 0, L_0x563d11675680;  1 drivers
+v0x563d11675450_0 .net "sum", 0 0, L_0x563d11675520;  1 drivers
+S_0x563d11662c50 .scope module, "H1" "halfadder" 2 5, 3 1 0, S_0x563d116421a0;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "sum"
+    .port_info 1 /OUTPUT 1 "cout"
+    .port_info 2 /INPUT 1 "a"
+    .port_info 3 /INPUT 1 "b"
+L_0x563d11675520 .functor XOR 1, v0x563d116751c0_0, v0x563d11675280_0, C4<0>, C4<0>;
+L_0x563d11675680 .functor AND 1, v0x563d116751c0_0, v0x563d11675280_0, C4<1>, C4<1>;
+v0x563d11662e90_0 .net "a", 0 0, v0x563d116751c0_0;  1 drivers
+v0x563d11674f20_0 .net "b", 0 0, v0x563d11675280_0;  1 drivers
+v0x563d11674fe0_0 .net "cout", 0 0, L_0x563d11675680;  alias, 1 drivers
+v0x563d11675080_0 .net "sum", 0 0, L_0x563d11675520;  alias, 1 drivers
+    .scope S_0x563d116421a0;
+T_0 ;
+    %vpi_call 2 10 "$monitor", $time, " a=%b,b=%b,cout=%b,sum=%b", v0x563d116751c0_0, v0x563d11675280_0, v0x563d11675350_0, v0x563d11675450_0 {0 0 0};
+    %vpi_call 2 11 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x563d116421a0 {0 0 0};
+    %vpi_call 2 12 "$dumpfile", "halfadder.vcd" {0 0 0};
+    %delay 5, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x563d116751c0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x563d11675280_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x563d116751c0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x563d11675280_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x563d116751c0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x563d11675280_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x563d116751c0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x563d11675280_0, 0, 1;
+    %delay 5, 0;
+    %vpi_call 2 19 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "testbench.v";
+    "halfadder.v";

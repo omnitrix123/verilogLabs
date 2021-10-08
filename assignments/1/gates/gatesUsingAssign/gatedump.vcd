@@ -1,0 +1,71 @@
+$date
+	Wed Sep 22 20:16:58 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module gateTestbench $end
+$var wire 1 ! outOr $end
+$var wire 1 " outNot $end
+$var wire 1 # outNor $end
+$var wire 1 $ outNand $end
+$var wire 1 % outExor $end
+$var wire 1 & outExnor $end
+$var wire 1 ' outAnd $end
+$var reg 1 ( in1 $end
+$var reg 1 ) in2 $end
+$scope module G1 $end
+$var wire 1 ( in1 $end
+$var wire 1 ) in2 $end
+$var wire 1 ' outAnd $end
+$var wire 1 & outExnor $end
+$var wire 1 % outExor $end
+$var wire 1 $ outNand $end
+$var wire 1 # outNor $end
+$var wire 1 " outNot $end
+$var wire 1 ! outOr $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x)
+x(
+x'
+x&
+x%
+x$
+x#
+x"
+x!
+$end
+#2
+1$
+1#
+1&
+0'
+0!
+1"
+0%
+0)
+0(
+#4
+0#
+0&
+1!
+1%
+1)
+#6
+0"
+0)
+1(
+#8
+0$
+1&
+1'
+0%
+1)
+#10
