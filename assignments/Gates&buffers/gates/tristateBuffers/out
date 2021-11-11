@@ -1,0 +1,98 @@
+#! /usr/bin/vvp
+:ivl_version "10.3 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x5596c506c2a0 .scope module, "testbench" "testbench" 2 1;
+ .timescale 0 0;
+v0x5596c5080b70_0 .var "ctrlbuf0", 0 0;
+v0x5596c5080c30_0 .var "ctrlbuf1", 0 0;
+v0x5596c5080d00_0 .var "ctrlnot0", 0 0;
+v0x5596c5080e00_0 .var "ctrlnot1", 0 0;
+v0x5596c5080ed0_0 .var "in", 0 0;
+v0x5596c5080f70_0 .net8 "outBufif0", 0 0, L_0x5596c5046fe0;  1 drivers, strength-aware
+v0x5596c5081040_0 .net8 "outBufif1", 0 0, L_0x5596c5046f70;  1 drivers, strength-aware
+v0x5596c5081110_0 .net "outNotif0", 0 0, L_0x5596c50813f0;  1 drivers
+v0x5596c50811e0_0 .net "outNotif1", 0 0, L_0x5596c5081540;  1 drivers
+S_0x5596c506c420 .scope module, "G1" "tristatebuffers" 2 5, 3 1 0, S_0x5596c506c2a0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "in"
+    .port_info 1 /INPUT 1 "ctrlbuf1"
+    .port_info 2 /INPUT 1 "ctrlbuf0"
+    .port_info 3 /INPUT 1 "ctrlnot0"
+    .port_info 4 /INPUT 1 "ctrlnot1"
+    .port_info 5 /OUTPUT 1 "outBufif1"
+    .port_info 6 /OUTPUT 1 "outBufif0"
+    .port_info 7 /OUTPUT 1 "outNotif0"
+    .port_info 8 /OUTPUT 1 "outNotif1"
+L_0x5596c5046f70 .functor BUFIF1 1, v0x5596c5080ed0_0, v0x5596c5080c30_0, C4<0>, C4<0>;
+L_0x5596c5046fe0 .functor BUFIF0 1, v0x5596c5080ed0_0, v0x5596c5080b70_0, C4<0>, C4<0>;
+L_0x5596c50813f0 .functor NOTIF0 1, v0x5596c5080ed0_0, v0x5596c5080d00_0, C4<0>, C4<0>;
+L_0x5596c5081540 .functor NOTIF1 1, v0x5596c5080ed0_0, v0x5596c5080e00_0, C4<0>, C4<0>;
+v0x5596c5047270_0 .net "ctrlbuf0", 0 0, v0x5596c5080b70_0;  1 drivers
+v0x5596c5047310_0 .net "ctrlbuf1", 0 0, v0x5596c5080c30_0;  1 drivers
+v0x5596c50804e0_0 .net "ctrlnot0", 0 0, v0x5596c5080d00_0;  1 drivers
+v0x5596c5080580_0 .net "ctrlnot1", 0 0, v0x5596c5080e00_0;  1 drivers
+v0x5596c5080640_0 .net "in", 0 0, v0x5596c5080ed0_0;  1 drivers
+v0x5596c5080750_0 .net8 "outBufif0", 0 0, L_0x5596c5046fe0;  alias, 1 drivers, strength-aware
+v0x5596c5080810_0 .net8 "outBufif1", 0 0, L_0x5596c5046f70;  alias, 1 drivers, strength-aware
+v0x5596c50808d0_0 .net "outNotif0", 0 0, L_0x5596c50813f0;  alias, 1 drivers
+v0x5596c5080990_0 .net "outNotif1", 0 0, L_0x5596c5081540;  alias, 1 drivers
+    .scope S_0x5596c506c2a0;
+T_0 ;
+    %vpi_call 2 9 "$monitor", $time, " in=%b,ctrlbuf1=%b,ctrlbuf0=%b,ctrlnot0=%b,ctrlnot1=%b,outBufif1=%b,outBufif0=%b,outNotif0=%b,outNotif1=%b", v0x5596c5080ed0_0, v0x5596c5080c30_0, v0x5596c5080b70_0, v0x5596c5080d00_0, v0x5596c5080e00_0, v0x5596c5081040_0, v0x5596c5080f70_0, v0x5596c5081110_0, v0x5596c50811e0_0 {0 0 0};
+    %vpi_call 2 10 "$dumpfile", "gatedump.vcd" {0 0 0};
+    %vpi_call 2 11 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x5596c506c2a0 {0 0 0};
+    %delay 0, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5596c5080ed0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5596c5080c30_0, 0, 1;
+    %delay 2, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5596c5080ed0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5596c5080c30_0, 0, 1;
+    %delay 2, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5596c5080ed0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5596c5080b70_0, 0, 1;
+    %delay 2, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5596c5080ed0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5596c5080b70_0, 0, 1;
+    %delay 2, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5596c5080ed0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5596c5080d00_0, 0, 1;
+    %delay 2, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5596c5080ed0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5596c5080d00_0, 0, 1;
+    %delay 2, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5596c5080ed0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5596c5080e00_0, 0, 1;
+    %delay 2, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5596c5080ed0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5596c5080e00_0, 0, 1;
+    %delay 2, 0;
+    %vpi_call 2 21 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "testbench.v";
+    "tristatebuffers.v";

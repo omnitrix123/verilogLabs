@@ -1,0 +1,66 @@
+$date
+	Thu Nov 11 10:17:05 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module testbench $end
+$var wire 1 ! outNotif1 $end
+$var wire 1 " outNotif0 $end
+$var wire 1 # outBufif1 $end
+$var wire 1 $ outBufif0 $end
+$var reg 1 % ctrlbuf0 $end
+$var reg 1 & ctrlbuf1 $end
+$var reg 1 ' ctrlnot0 $end
+$var reg 1 ( ctrlnot1 $end
+$var reg 1 ) in $end
+$scope module G1 $end
+$var wire 1 % ctrlbuf0 $end
+$var wire 1 & ctrlbuf1 $end
+$var wire 1 ' ctrlnot0 $end
+$var wire 1 ( ctrlnot1 $end
+$var wire 1 ) in $end
+$var wire 1 $ outBufif0 $end
+$var wire 1 # outBufif1 $end
+$var wire 1 " outNotif0 $end
+$var wire 1 ! outNotif1 $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1)
+x(
+x'
+0&
+x%
+x$
+z#
+x"
+x!
+$end
+#2
+1#
+1&
+#4
+1$
+0%
+#6
+z$
+1%
+#8
+0"
+0'
+#10
+z"
+1'
+#12
+z!
+0(
+#14
+0!
+1(
+#16
