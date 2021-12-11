@@ -1,0 +1,961 @@
+{
+  "creator": "Yosys 0.9 (git sha1 1979e0b)",
+  "modules": {
+    "carry": {
+      "attributes": {
+        "src": "thirtytwobitadder.v:78"
+      },
+      "ports": {
+        "cout": {
+          "direction": "output",
+          "bits": [ 2 ]
+        },
+        "a": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "b": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "cin": {
+          "direction": "input",
+          "bits": [ 5 ]
+        }
+      },
+      "cells": {
+        "$and$thirtytwobitadder.v:83$3": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "thirtytwobitadder.v:83"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 3 ],
+            "B": [ 4 ],
+            "Y": [ 6 ]
+          }
+        },
+        "$and$thirtytwobitadder.v:84$4": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "thirtytwobitadder.v:84"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 4 ],
+            "B": [ 5 ],
+            "Y": [ 7 ]
+          }
+        },
+        "$and$thirtytwobitadder.v:85$5": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "thirtytwobitadder.v:85"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 3 ],
+            "B": [ 5 ],
+            "Y": [ 8 ]
+          }
+        },
+        "$or$thirtytwobitadder.v:86$6": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "thirtytwobitadder.v:86"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6 ],
+            "B": [ 7 ],
+            "Y": [ 9 ]
+          }
+        },
+        "$or$thirtytwobitadder.v:86$7": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "thirtytwobitadder.v:86"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9 ],
+            "B": [ 8 ],
+            "Y": [ 2 ]
+          }
+        }
+      },
+      "netnames": {
+        "$or$thirtytwobitadder.v:86$6_Y": {
+          "hide_name": 1,
+          "bits": [ 9 ],
+          "attributes": {
+            "src": "thirtytwobitadder.v:86"
+          }
+        },
+        "a": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "thirtytwobitadder.v:79"
+          }
+        },
+        "b": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "thirtytwobitadder.v:79"
+          }
+        },
+        "cin": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "thirtytwobitadder.v:79"
+          }
+        },
+        "cout": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "thirtytwobitadder.v:80"
+          }
+        },
+        "t1": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "thirtytwobitadder.v:81"
+          }
+        },
+        "t2": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "src": "thirtytwobitadder.v:81"
+          }
+        },
+        "t3": {
+          "hide_name": 0,
+          "bits": [ 8 ],
+          "attributes": {
+            "src": "thirtytwobitadder.v:81"
+          }
+        }
+      }
+    },
+    "eightbitFA": {
+      "attributes": {
+        "src": "thirtytwobitadder.v:29"
+      },
+      "ports": {
+        "cout": {
+          "direction": "output",
+          "bits": [ 2 ]
+        },
+        "sumout": {
+          "direction": "output",
+          "bits": [ 3, 4, 5, 6, 7, 8, 9, 10 ]
+        },
+        "a": {
+          "direction": "input",
+          "bits": [ 11, 12, 13, 14, 15, 16, 17, 18 ]
+        },
+        "b": {
+          "direction": "input",
+          "bits": [ 19, 20, 21, 22, 23, 24, 25, 26 ]
+        },
+        "cin": {
+          "direction": "input",
+          "bits": [ 27 ]
+        }
+      },
+      "cells": {
+        "B80": {
+          "hide_name": 0,
+          "type": "fourbitFA",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "thirtytwobitadder.v:37"
+          },
+          "port_directions": {
+            "a": "input",
+            "b": "input",
+            "cin": "input",
+            "cout": "output",
+            "sumout": "output"
+          },
+          "connections": {
+            "a": [ 11, 12, 13, 14 ],
+            "b": [ 19, 20, 21, 22 ],
+            "cin": [ 27 ],
+            "cout": [ 28 ],
+            "sumout": [ 3, 4, 5, 6 ]
+          }
+        },
+        "B81": {
+          "hide_name": 0,
+          "type": "fourbitFA",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "thirtytwobitadder.v:38"
+          },
+          "port_directions": {
+            "a": "input",
+            "b": "input",
+            "cin": "input",
+            "cout": "output",
+            "sumout": "output"
+          },
+          "connections": {
+            "a": [ 15, 16, 17, 18 ],
+            "b": [ 23, 24, 25, 26 ],
+            "cin": [ 28 ],
+            "cout": [ 2 ],
+            "sumout": [ 7, 8, 9, 10 ]
+          }
+        }
+      },
+      "netnames": {
+        "a": {
+          "hide_name": 0,
+          "bits": [ 11, 12, 13, 14, 15, 16, 17, 18 ],
+          "attributes": {
+            "src": "thirtytwobitadder.v:30"
+          }
+        },
+        "b": {
+          "hide_name": 0,
+          "bits": [ 19, 20, 21, 22, 23, 24, 25, 26 ],
+          "attributes": {
+            "src": "thirtytwobitadder.v:31"
+          }
+        },
+        "cimm": {
+          "hide_name": 0,
+          "bits": [ 28 ],
+          "attributes": {
+            "src": "thirtytwobitadder.v:35"
+          }
+        },
+        "cin": {
+          "hide_name": 0,
+          "bits": [ 27 ],
+          "attributes": {
+            "src": "thirtytwobitadder.v:32"
+          }
+        },
+        "cout": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "thirtytwobitadder.v:34"
+          }
+        },
+        "sumout": {
+          "hide_name": 0,
+          "bits": [ 3, 4, 5, 6, 7, 8, 9, 10 ],
+          "attributes": {
+            "src": "thirtytwobitadder.v:33"
+          }
+        }
+      }
+    },
+    "fourbitFA": {
+      "attributes": {
+        "src": "thirtytwobitadder.v:43"
+      },
+      "ports": {
+        "cout": {
+          "direction": "output",
+          "bits": [ 2 ]
+        },
+        "sumout": {
+          "direction": "output",
+          "bits": [ 3, 4, 5, 6 ]
+        },
+        "a": {
+          "direction": "input",
+          "bits": [ 7, 8, 9, 10 ]
+        },
+        "b": {
+          "direction": "input",
+          "bits": [ 11, 12, 13, 14 ]
+        },
+        "cin": {
+          "direction": "input",
+          "bits": [ 15 ]
+        }
+      },
+      "cells": {
+        "B40": {
+          "hide_name": 0,
+          "type": "onebitFA",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "thirtytwobitadder.v:51"
+          },
+          "port_directions": {
+            "a": "input",
+            "b": "input",
+            "cin": "input",
+            "cout": "output",
+            "sumout": "output"
+          },
+          "connections": {
+            "a": [ 7 ],
+            "b": [ 11 ],
+            "cin": [ 15 ],
+            "cout": [ 16 ],
+            "sumout": [ 3 ]
+          }
+        },
+        "B41": {
+          "hide_name": 0,
+          "type": "onebitFA",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "thirtytwobitadder.v:52"
+          },
+          "port_directions": {
+            "a": "input",
+            "b": "input",
+            "cin": "input",
+            "cout": "output",
+            "sumout": "output"
+          },
+          "connections": {
+            "a": [ 8 ],
+            "b": [ 12 ],
+            "cin": [ 16 ],
+            "cout": [ 17 ],
+            "sumout": [ 4 ]
+          }
+        },
+        "B42": {
+          "hide_name": 0,
+          "type": "onebitFA",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "thirtytwobitadder.v:53"
+          },
+          "port_directions": {
+            "a": "input",
+            "b": "input",
+            "cin": "input",
+            "cout": "output",
+            "sumout": "output"
+          },
+          "connections": {
+            "a": [ 9 ],
+            "b": [ 13 ],
+            "cin": [ 17 ],
+            "cout": [ 18 ],
+            "sumout": [ 5 ]
+          }
+        },
+        "B43": {
+          "hide_name": 0,
+          "type": "onebitFA",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "thirtytwobitadder.v:54"
+          },
+          "port_directions": {
+            "a": "input",
+            "b": "input",
+            "cin": "input",
+            "cout": "output",
+            "sumout": "output"
+          },
+          "connections": {
+            "a": [ 10 ],
+            "b": [ 14 ],
+            "cin": [ 18 ],
+            "cout": [ 2 ],
+            "sumout": [ 6 ]
+          }
+        }
+      },
+      "netnames": {
+        "a": {
+          "hide_name": 0,
+          "bits": [ 7, 8, 9, 10 ],
+          "attributes": {
+            "src": "thirtytwobitadder.v:44"
+          }
+        },
+        "b": {
+          "hide_name": 0,
+          "bits": [ 11, 12, 13, 14 ],
+          "attributes": {
+            "src": "thirtytwobitadder.v:45"
+          }
+        },
+        "cimm": {
+          "hide_name": 0,
+          "bits": [ 16, 17, 18 ],
+          "attributes": {
+            "src": "thirtytwobitadder.v:49"
+          }
+        },
+        "cin": {
+          "hide_name": 0,
+          "bits": [ 15 ],
+          "attributes": {
+            "src": "thirtytwobitadder.v:46"
+          }
+        },
+        "cout": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "thirtytwobitadder.v:48"
+          }
+        },
+        "sumout": {
+          "hide_name": 0,
+          "bits": [ 3, 4, 5, 6 ],
+          "attributes": {
+            "src": "thirtytwobitadder.v:47"
+          }
+        }
+      }
+    },
+    "onebitFA": {
+      "attributes": {
+        "src": "thirtytwobitadder.v:59"
+      },
+      "ports": {
+        "cout": {
+          "direction": "output",
+          "bits": [ 2 ]
+        },
+        "sumout": {
+          "direction": "output",
+          "bits": [ 3 ]
+        },
+        "a": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "b": {
+          "direction": "input",
+          "bits": [ 5 ]
+        },
+        "cin": {
+          "direction": "input",
+          "bits": [ 6 ]
+        }
+      },
+      "cells": {
+        "C1": {
+          "hide_name": 0,
+          "type": "carry",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "thirtytwobitadder.v:64"
+          },
+          "port_directions": {
+            "a": "input",
+            "b": "input",
+            "cin": "input",
+            "cout": "output"
+          },
+          "connections": {
+            "a": [ 4 ],
+            "b": [ 5 ],
+            "cin": [ 6 ],
+            "cout": [ 2 ]
+          }
+        },
+        "S1": {
+          "hide_name": 0,
+          "type": "sum",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "thirtytwobitadder.v:63"
+          },
+          "port_directions": {
+            "a": "input",
+            "b": "input",
+            "cin": "input",
+            "sumout": "output"
+          },
+          "connections": {
+            "a": [ 4 ],
+            "b": [ 5 ],
+            "cin": [ 6 ],
+            "sumout": [ 3 ]
+          }
+        }
+      },
+      "netnames": {
+        "a": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "thirtytwobitadder.v:60"
+          }
+        },
+        "b": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "thirtytwobitadder.v:60"
+          }
+        },
+        "cin": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "thirtytwobitadder.v:60"
+          }
+        },
+        "cout": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "thirtytwobitadder.v:61"
+          }
+        },
+        "sumout": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "thirtytwobitadder.v:61"
+          }
+        }
+      }
+    },
+    "sixteenbitFA": {
+      "attributes": {
+        "src": "thirtytwobitadder.v:15"
+      },
+      "ports": {
+        "cout": {
+          "direction": "output",
+          "bits": [ 2 ]
+        },
+        "sumout": {
+          "direction": "output",
+          "bits": [ 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18 ]
+        },
+        "a": {
+          "direction": "input",
+          "bits": [ 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34 ]
+        },
+        "b": {
+          "direction": "input",
+          "bits": [ 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50 ]
+        },
+        "cin": {
+          "direction": "input",
+          "bits": [ 51 ]
+        }
+      },
+      "cells": {
+        "B160": {
+          "hide_name": 0,
+          "type": "eightbitFA",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "thirtytwobitadder.v:23"
+          },
+          "port_directions": {
+            "a": "input",
+            "b": "input",
+            "cin": "input",
+            "cout": "output",
+            "sumout": "output"
+          },
+          "connections": {
+            "a": [ 19, 20, 21, 22, 23, 24, 25, 26 ],
+            "b": [ 35, 36, 37, 38, 39, 40, 41, 42 ],
+            "cin": [ 51 ],
+            "cout": [ 52 ],
+            "sumout": [ 3, 4, 5, 6, 7, 8, 9, 10 ]
+          }
+        },
+        "B161": {
+          "hide_name": 0,
+          "type": "eightbitFA",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "thirtytwobitadder.v:24"
+          },
+          "port_directions": {
+            "a": "input",
+            "b": "input",
+            "cin": "input",
+            "cout": "output",
+            "sumout": "output"
+          },
+          "connections": {
+            "a": [ 27, 28, 29, 30, 31, 32, 33, 34 ],
+            "b": [ 43, 44, 45, 46, 47, 48, 49, 50 ],
+            "cin": [ 52 ],
+            "cout": [ 2 ],
+            "sumout": [ 11, 12, 13, 14, 15, 16, 17, 18 ]
+          }
+        }
+      },
+      "netnames": {
+        "a": {
+          "hide_name": 0,
+          "bits": [ 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34 ],
+          "attributes": {
+            "src": "thirtytwobitadder.v:16"
+          }
+        },
+        "b": {
+          "hide_name": 0,
+          "bits": [ 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50 ],
+          "attributes": {
+            "src": "thirtytwobitadder.v:17"
+          }
+        },
+        "cimm": {
+          "hide_name": 0,
+          "bits": [ 52 ],
+          "attributes": {
+            "src": "thirtytwobitadder.v:21"
+          }
+        },
+        "cin": {
+          "hide_name": 0,
+          "bits": [ 51 ],
+          "attributes": {
+            "src": "thirtytwobitadder.v:18"
+          }
+        },
+        "cout": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "thirtytwobitadder.v:20"
+          }
+        },
+        "sumout": {
+          "hide_name": 0,
+          "bits": [ 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18 ],
+          "attributes": {
+            "src": "thirtytwobitadder.v:19"
+          }
+        }
+      }
+    },
+    "sum": {
+      "attributes": {
+        "src": "thirtytwobitadder.v:68"
+      },
+      "ports": {
+        "sumout": {
+          "direction": "output",
+          "bits": [ 2 ]
+        },
+        "a": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "b": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "cin": {
+          "direction": "input",
+          "bits": [ 5 ]
+        }
+      },
+      "cells": {
+        "$xor$thirtytwobitadder.v:73$1": {
+          "hide_name": 1,
+          "type": "$xor",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "thirtytwobitadder.v:73"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 3 ],
+            "B": [ 4 ],
+            "Y": [ 6 ]
+          }
+        },
+        "$xor$thirtytwobitadder.v:74$2": {
+          "hide_name": 1,
+          "type": "$xor",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "thirtytwobitadder.v:74"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6 ],
+            "B": [ 5 ],
+            "Y": [ 2 ]
+          }
+        }
+      },
+      "netnames": {
+        "a": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "thirtytwobitadder.v:69"
+          }
+        },
+        "b": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "thirtytwobitadder.v:69"
+          }
+        },
+        "cin": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "thirtytwobitadder.v:69"
+          }
+        },
+        "sumout": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "thirtytwobitadder.v:70"
+          }
+        },
+        "t1": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "thirtytwobitadder.v:71"
+          }
+        }
+      }
+    },
+    "thirtytwobitFA": {
+      "attributes": {
+        "top": 1,
+        "src": "thirtytwobitadder.v:1"
+      },
+      "ports": {
+        "cout": {
+          "direction": "output",
+          "bits": [ 2 ]
+        },
+        "sumout": {
+          "direction": "output",
+          "bits": [ 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34 ]
+        },
+        "a": {
+          "direction": "input",
+          "bits": [ 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66 ]
+        },
+        "b": {
+          "direction": "input",
+          "bits": [ 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98 ]
+        },
+        "cin": {
+          "direction": "input",
+          "bits": [ 99 ]
+        }
+      },
+      "cells": {
+        "B320": {
+          "hide_name": 0,
+          "type": "sixteenbitFA",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "thirtytwobitadder.v:9"
+          },
+          "port_directions": {
+            "a": "input",
+            "b": "input",
+            "cin": "input",
+            "cout": "output",
+            "sumout": "output"
+          },
+          "connections": {
+            "a": [ 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50 ],
+            "b": [ 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82 ],
+            "cin": [ 99 ],
+            "cout": [ 100 ],
+            "sumout": [ 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18 ]
+          }
+        },
+        "B321": {
+          "hide_name": 0,
+          "type": "sixteenbitFA",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "thirtytwobitadder.v:10"
+          },
+          "port_directions": {
+            "a": "input",
+            "b": "input",
+            "cin": "input",
+            "cout": "output",
+            "sumout": "output"
+          },
+          "connections": {
+            "a": [ 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66 ],
+            "b": [ 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98 ],
+            "cin": [ 100 ],
+            "cout": [ 2 ],
+            "sumout": [ 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34 ]
+          }
+        }
+      },
+      "netnames": {
+        "a": {
+          "hide_name": 0,
+          "bits": [ 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66 ],
+          "attributes": {
+            "src": "thirtytwobitadder.v:2"
+          }
+        },
+        "b": {
+          "hide_name": 0,
+          "bits": [ 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98 ],
+          "attributes": {
+            "src": "thirtytwobitadder.v:3"
+          }
+        },
+        "cimm": {
+          "hide_name": 0,
+          "bits": [ 100 ],
+          "attributes": {
+            "src": "thirtytwobitadder.v:7"
+          }
+        },
+        "cin": {
+          "hide_name": 0,
+          "bits": [ 99 ],
+          "attributes": {
+            "src": "thirtytwobitadder.v:4"
+          }
+        },
+        "cout": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "thirtytwobitadder.v:6"
+          }
+        },
+        "sumout": {
+          "hide_name": 0,
+          "bits": [ 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34 ],
+          "attributes": {
+            "src": "thirtytwobitadder.v:5"
+          }
+        }
+      }
+    }
+  }
+}

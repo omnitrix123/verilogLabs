@@ -1,0 +1,279 @@
+{
+  "creator": "Yosys 0.9 (git sha1 1979e0b)",
+  "modules": {
+    "gates": {
+      "attributes": {
+        "top": 1,
+        "src": "gatePrimitive.v:1"
+      },
+      "ports": {
+        "in1": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "in2": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "outAnd": {
+          "direction": "output",
+          "bits": [ 4 ]
+        },
+        "outOr": {
+          "direction": "output",
+          "bits": [ 5 ]
+        },
+        "outNot": {
+          "direction": "output",
+          "bits": [ 6 ]
+        },
+        "outNand": {
+          "direction": "output",
+          "bits": [ 7 ]
+        },
+        "outNor": {
+          "direction": "output",
+          "bits": [ 8 ]
+        },
+        "outExor": {
+          "direction": "output",
+          "bits": [ 9 ]
+        },
+        "outExnor": {
+          "direction": "output",
+          "bits": [ 10 ]
+        },
+        "outBuffer": {
+          "direction": "output",
+          "bits": [ 2 ]
+        }
+      },
+      "cells": {
+        "$and$gatePrimitive.v:5$1": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "gatePrimitive.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2 ],
+            "B": [ 3 ],
+            "Y": [ 4 ]
+          }
+        },
+        "$not$gatePrimitive.v:11$10": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "gatePrimitive.v:11"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9 ],
+            "Y": [ 10 ]
+          }
+        },
+        "$not$gatePrimitive.v:7$4": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "gatePrimitive.v:7"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 4 ],
+            "Y": [ 7 ]
+          }
+        },
+        "$not$gatePrimitive.v:8$6": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "gatePrimitive.v:8"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 5 ],
+            "Y": [ 8 ]
+          }
+        },
+        "$not$gatePrimitive.v:9$7": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "gatePrimitive.v:9"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2 ],
+            "Y": [ 6 ]
+          }
+        },
+        "$or$gatePrimitive.v:6$2": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "gatePrimitive.v:6"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2 ],
+            "B": [ 3 ],
+            "Y": [ 5 ]
+          }
+        },
+        "$xor$gatePrimitive.v:10$8": {
+          "hide_name": 1,
+          "type": "$xor",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "gatePrimitive.v:10"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2 ],
+            "B": [ 3 ],
+            "Y": [ 9 ]
+          }
+        }
+      },
+      "netnames": {
+        "in1": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "gatePrimitive.v:2"
+          }
+        },
+        "in2": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "gatePrimitive.v:2"
+          }
+        },
+        "outAnd": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "gatePrimitive.v:3"
+          }
+        },
+        "outBuffer": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "gatePrimitive.v:3"
+          }
+        },
+        "outExnor": {
+          "hide_name": 0,
+          "bits": [ 10 ],
+          "attributes": {
+            "src": "gatePrimitive.v:3"
+          }
+        },
+        "outExor": {
+          "hide_name": 0,
+          "bits": [ 9 ],
+          "attributes": {
+            "src": "gatePrimitive.v:3"
+          }
+        },
+        "outNand": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "src": "gatePrimitive.v:3"
+          }
+        },
+        "outNor": {
+          "hide_name": 0,
+          "bits": [ 8 ],
+          "attributes": {
+            "src": "gatePrimitive.v:3"
+          }
+        },
+        "outNot": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "gatePrimitive.v:3"
+          }
+        },
+        "outOr": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "gatePrimitive.v:3"
+          }
+        }
+      }
+    }
+  }
+}

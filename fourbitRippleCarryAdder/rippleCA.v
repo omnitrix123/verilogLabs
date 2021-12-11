@@ -1,4 +1,4 @@
-module fourbitFA(cout,sumout,a,b,cin);
+module rippleCA(cout,sumout,a,b,cin);
    input [3:0] a;
    input [3:0] b;
    input cin;
@@ -6,15 +6,15 @@ module fourbitFA(cout,sumout,a,b,cin);
    output cout;
    wire [2:0] cimm;
    
-   oneBitFA B0 (cimm[0], sumout[0],a[0],b[0],cin);
-   oneBitFA B1 (cimm[1], sumout[1],a[1],b[1],cimm[0]);
-   oneBitFA B2 (cimm[2], sumout[2],a[2],b[2],cimm[1]);
-   oneBitFA B3 (cout, sumout[3],a[3],b[3],cimm[2]);
+   onebitFA B40 (cimm[0], sumout[0],a[0],b[0],cin);
+   onebitFA B41 (cimm[1], sumout[1],a[1],b[1],cimm[0]);
+   onebitFA B42 (cimm[2], sumout[2],a[2],b[2],cimm[1]);
+   onebitFA B43 (cout, sumout[3],a[3],b[3],cimm[2]);
    
 endmodule
 
 
-module oneBitFA(cout,sumout,a,b,cin);
+module onebitFA(cout,sumout,a,b,cin);
    input a,b,cin;
    output cout,sumout;
    
