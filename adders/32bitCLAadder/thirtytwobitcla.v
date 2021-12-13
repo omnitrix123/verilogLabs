@@ -21,7 +21,6 @@ module cla2(a,b,cin,gout,pout,s);
  input cin;
  output gout,pout;
  output [1:0] s;
- output [1:0] g,p;
  wire [1:0] g,p;
  wire cout;
  //add (a,b,c,g,p,s)

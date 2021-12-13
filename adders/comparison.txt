@@ -1,0 +1,60 @@
+=== thirtytwobitFA ===
+
+   Number of wires:                666
+   Number of wire bits:           1021
+   Number of public wires:         634
+   Number of public wire bits:     989
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                224
+     $and                           96
+     $or                            64
+     $xor                           64
+
+
+
+=== cla32 ===
+
+   Number of wires:                463
+   Number of wire bits:           1007
+   Number of public wires:         415
+   Number of public wire bits:     959
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                128
+     $and                           32
+     $or                            32
+     $xor                           64
+
+
+=== rippleCA ===
+
+   Number of wires:                 78
+   Number of wire bits:             89
+   Number of public wires:          74
+   Number of public wire bits:      85
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 28
+     $and                           12
+     $or                             8
+     $xor                            8
+
+
+=== carrylookahead ===
+
+   Number of wires:                 38
+   Number of wire bits:             47
+   Number of public wires:          16
+   Number of public wire bits:      25
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 38
+     $and                           20
+     $or                            10
+     $xor                            8
+

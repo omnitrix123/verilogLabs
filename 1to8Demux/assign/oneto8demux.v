@@ -4,8 +4,10 @@ module oneto8demux(a,sel,out);
  output reg [7:0]out;
  
  always@(a or sel) 
+ begin
   out = 8'b00000000;
   out[sel] = a;
+ end
 
 endmodule
         
