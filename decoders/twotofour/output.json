@@ -1,0 +1,250 @@
+{
+  "creator": "Yosys 0.9 (git sha1 1979e0b)",
+  "modules": {
+    "twotofour": {
+      "attributes": {
+        "top": 1,
+        "src": "twotofour.v:1"
+      },
+      "ports": {
+        "in": {
+          "direction": "input",
+          "bits": [ 2, 3 ]
+        },
+        "out": {
+          "direction": "output",
+          "bits": [ 4, 5, 6, 7 ]
+        },
+        "en": {
+          "direction": "input",
+          "bits": [ 8 ]
+        }
+      },
+      "cells": {
+        "$auto$proc_dlatch.cc:409:proc_dlatch$61": {
+          "hide_name": 1,
+          "type": "$dlatch",
+          "parameters": {
+            "EN_POLARITY": 1,
+            "WIDTH": 4
+          },
+          "attributes": {
+            "src": "twotofour.v:6"
+          },
+          "port_directions": {
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [ 9, 10, 11, 12 ],
+            "EN": [ 8 ],
+            "Q": [ 4, 5, 6, 7 ]
+          }
+        },
+        "$eq$twotofour.v:11$2": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 2,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "twotofour.v:11"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3 ],
+            "Y": [ 13 ]
+          }
+        },
+        "$eq$twotofour.v:13$3": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 2,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "twotofour.v:13"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3 ],
+            "B": [ "1" ],
+            "Y": [ 14 ]
+          }
+        },
+        "$eq$twotofour.v:15$4": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 2,
+            "B_SIGNED": 0,
+            "B_WIDTH": 2,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "twotofour.v:15"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3 ],
+            "B": [ "0", "1" ],
+            "Y": [ 15 ]
+          }
+        },
+        "$procmux$23": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": 4
+          },
+          "attributes": {
+            "full_case": 1,
+            "src": "twotofour.v:15"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0", "0", "0", "1" ],
+            "B": [ "0", "0", "1", "0" ],
+            "S": [ 15 ],
+            "Y": [ 16, 17, 18, 19 ]
+          }
+        },
+        "$procmux$35": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": 4
+          },
+          "attributes": {
+            "full_case": 1,
+            "src": "twotofour.v:13"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 16, 17, 18, 19 ],
+            "B": [ "0", "1", "0", "0" ],
+            "S": [ 14 ],
+            "Y": [ 20, 21, 22, 23 ]
+          }
+        },
+        "$procmux$44": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": 4
+          },
+          "attributes": {
+            "full_case": 1,
+            "src": "twotofour.v:11"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 20, 21, 22, 23 ],
+            "B": [ "1", "0", "0", "0" ],
+            "S": [ 13 ],
+            "Y": [ 9, 10, 11, 12 ]
+          }
+        }
+      },
+      "netnames": {
+        "$0\\out[3:0]": {
+          "hide_name": 1,
+          "bits": [ 9, 10, 11, 12 ],
+          "attributes": {
+            "src": "twotofour.v:6"
+          }
+        },
+        "$3\\out[3:0]": {
+          "hide_name": 1,
+          "bits": [ 20, 21, 22, 23 ],
+          "attributes": {
+            "src": "twotofour.v:6"
+          }
+        },
+        "$4\\out[3:0]": {
+          "hide_name": 1,
+          "bits": [ 16, 17, 18, 19 ],
+          "attributes": {
+            "src": "twotofour.v:6"
+          }
+        },
+        "$eq$twotofour.v:11$2_Y": {
+          "hide_name": 1,
+          "bits": [ 13 ],
+          "attributes": {
+            "src": "twotofour.v:11"
+          }
+        },
+        "$eq$twotofour.v:13$3_Y": {
+          "hide_name": 1,
+          "bits": [ 14 ],
+          "attributes": {
+            "src": "twotofour.v:13"
+          }
+        },
+        "$eq$twotofour.v:15$4_Y": {
+          "hide_name": 1,
+          "bits": [ 15 ],
+          "attributes": {
+            "src": "twotofour.v:15"
+          }
+        },
+        "en": {
+          "hide_name": 0,
+          "bits": [ 8 ],
+          "attributes": {
+            "src": "twotofour.v:3"
+          }
+        },
+        "in": {
+          "hide_name": 0,
+          "bits": [ 2, 3 ],
+          "attributes": {
+            "src": "twotofour.v:2"
+          }
+        },
+        "out": {
+          "hide_name": 0,
+          "bits": [ 4, 5, 6, 7 ],
+          "attributes": {
+            "src": "twotofour.v:4"
+          }
+        }
+      }
+    }
+  }
+}

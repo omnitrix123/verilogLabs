@@ -15,7 +15,7 @@ module testbench;
       
       #5 si=1; 
       #5 si=0;
-      #5 si=1;
+      #5 si=0;
       #5 si=1;
       #10 $finish;
       

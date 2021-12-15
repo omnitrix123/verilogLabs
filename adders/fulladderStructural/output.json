@@ -1,0 +1,331 @@
+{
+  "creator": "Yosys 0.9 (git sha1 1979e0b)",
+  "modules": {
+    "oneBitFA": {
+      "attributes": {
+        "top": 1,
+        "src": "oneBitFA.v:1"
+      },
+      "ports": {
+        "cout": {
+          "direction": "output",
+          "bits": [ 2 ]
+        },
+        "sumout": {
+          "direction": "output",
+          "bits": [ 3 ]
+        },
+        "a": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "b": {
+          "direction": "input",
+          "bits": [ 5 ]
+        },
+        "cin": {
+          "direction": "input",
+          "bits": [ 6 ]
+        }
+      },
+      "cells": {
+        "$techmap\\C1.$and$oneBitFA.v:25$3": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "oneBitFA.v:6|oneBitFA.v:25"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 4 ],
+            "B": [ 5 ],
+            "Y": [ 7 ]
+          }
+        },
+        "$techmap\\C1.$and$oneBitFA.v:26$4": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "oneBitFA.v:6|oneBitFA.v:26"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 5 ],
+            "B": [ 6 ],
+            "Y": [ 8 ]
+          }
+        },
+        "$techmap\\C1.$and$oneBitFA.v:27$5": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "oneBitFA.v:6|oneBitFA.v:27"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 4 ],
+            "B": [ 6 ],
+            "Y": [ 9 ]
+          }
+        },
+        "$techmap\\C1.$or$oneBitFA.v:28$6": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "oneBitFA.v:6|oneBitFA.v:28"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 7 ],
+            "B": [ 8 ],
+            "Y": [ 10 ]
+          }
+        },
+        "$techmap\\C1.$or$oneBitFA.v:28$7": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "oneBitFA.v:6|oneBitFA.v:28"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 10 ],
+            "B": [ 9 ],
+            "Y": [ 2 ]
+          }
+        },
+        "$techmap\\S1.$xor$oneBitFA.v:15$1": {
+          "hide_name": 1,
+          "type": "$xor",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "oneBitFA.v:5|oneBitFA.v:15"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 4 ],
+            "B": [ 5 ],
+            "Y": [ 11 ]
+          }
+        },
+        "$techmap\\S1.$xor$oneBitFA.v:16$2": {
+          "hide_name": 1,
+          "type": "$xor",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "oneBitFA.v:5|oneBitFA.v:16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 11 ],
+            "B": [ 6 ],
+            "Y": [ 3 ]
+          }
+        }
+      },
+      "netnames": {
+        "$techmap\\C1.$or$oneBitFA.v:28$6_Y": {
+          "hide_name": 1,
+          "bits": [ 10 ],
+          "attributes": {
+            "src": "oneBitFA.v:6|oneBitFA.v:28"
+          }
+        },
+        "C1.a": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "oneBitFA.v:6|oneBitFA.v:21"
+          }
+        },
+        "C1.b": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "oneBitFA.v:6|oneBitFA.v:21"
+          }
+        },
+        "C1.cin": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "oneBitFA.v:6|oneBitFA.v:21"
+          }
+        },
+        "C1.cout": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "oneBitFA.v:6|oneBitFA.v:22"
+          }
+        },
+        "C1.t1": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "src": "oneBitFA.v:6|oneBitFA.v:23"
+          }
+        },
+        "C1.t2": {
+          "hide_name": 0,
+          "bits": [ 8 ],
+          "attributes": {
+            "src": "oneBitFA.v:6|oneBitFA.v:23"
+          }
+        },
+        "C1.t3": {
+          "hide_name": 0,
+          "bits": [ 9 ],
+          "attributes": {
+            "src": "oneBitFA.v:6|oneBitFA.v:23"
+          }
+        },
+        "S1.a": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "oneBitFA.v:5|oneBitFA.v:11"
+          }
+        },
+        "S1.b": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "oneBitFA.v:5|oneBitFA.v:11"
+          }
+        },
+        "S1.cin": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "oneBitFA.v:5|oneBitFA.v:11"
+          }
+        },
+        "S1.sumout": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "oneBitFA.v:5|oneBitFA.v:12"
+          }
+        },
+        "S1.t1": {
+          "hide_name": 0,
+          "bits": [ 11 ],
+          "attributes": {
+            "src": "oneBitFA.v:5|oneBitFA.v:13"
+          }
+        },
+        "a": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "oneBitFA.v:2"
+          }
+        },
+        "b": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "oneBitFA.v:2"
+          }
+        },
+        "cin": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "oneBitFA.v:2"
+          }
+        },
+        "cout": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "oneBitFA.v:3"
+          }
+        },
+        "sumout": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "oneBitFA.v:3"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,403 @@
+{
+  "creator": "Yosys 0.9 (git sha1 1979e0b)",
+  "modules": {
+    "fourtotwo": {
+      "attributes": {
+        "top": 1,
+        "src": "fourtotwo.v:1"
+      },
+      "ports": {
+        "in": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5 ]
+        },
+        "out": {
+          "direction": "output",
+          "bits": [ 6, 7 ]
+        }
+      },
+      "cells": {
+        "$auto$proc_dlatch.cc:238:make_hold$10": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "fourtotwo.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 8 ],
+            "Y": [ 9 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:238:make_hold$12": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "fourtotwo.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 10 ],
+            "Y": [ 11 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:238:make_hold$14": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "fourtotwo.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 5 ],
+            "Y": [ 12 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:238:make_hold$8": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "fourtotwo.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 13 ],
+            "Y": [ 14 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:251:make_hold$22": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "fourtotwo.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 11 ],
+            "B": [ 12 ],
+            "Y": [ 15 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:251:make_hold$26": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "fourtotwo.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9 ],
+            "B": [ 15 ],
+            "Y": [ 16 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:251:make_hold$30": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "fourtotwo.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 14 ],
+            "B": [ 16 ],
+            "Y": [ 17 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:409:proc_dlatch$34": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 17 ],
+            "Y": [ 18 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:409:proc_dlatch$36": {
+          "hide_name": 1,
+          "type": "$dlatch",
+          "parameters": {
+            "EN_POLARITY": 1,
+            "WIDTH": 2
+          },
+          "attributes": {
+            "src": "fourtotwo.v:5"
+          },
+          "port_directions": {
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [ 19, 20 ],
+            "EN": [ 18 ],
+            "Q": [ 6, 7 ]
+          }
+        },
+        "$procmux$3": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": 3,
+            "WIDTH": 2
+          },
+          "attributes": {
+            "full_case": 1,
+            "src": "fourtotwo.v:11|fourtotwo.v:7"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0", "0" ],
+            "B": [ "1", "1", "0", "1", "1", "0" ],
+            "S": [ 5, 10, 8 ],
+            "Y": [ 19, 20 ]
+          }
+        },
+        "$procmux$5_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 2,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "full_case": 1,
+            "src": "fourtotwo.v:10|fourtotwo.v:7"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 4, 5 ],
+            "B": [ "1" ],
+            "Y": [ 10 ]
+          }
+        },
+        "$procmux$6_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 3,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "full_case": 1,
+            "src": "fourtotwo.v:9|fourtotwo.v:7"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 3, 4, 5 ],
+            "B": [ "1" ],
+            "Y": [ 8 ]
+          }
+        },
+        "$procmux$7_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 4,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "full_case": 1,
+            "src": "fourtotwo.v:8|fourtotwo.v:7"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5 ],
+            "B": [ "1" ],
+            "Y": [ 13 ]
+          }
+        }
+      },
+      "netnames": {
+        "$0\\out[1:0]": {
+          "hide_name": 1,
+          "bits": [ 19, 20 ],
+          "attributes": {
+            "src": "fourtotwo.v:5"
+          }
+        },
+        "$auto$rtlil.cc:1832:Not$11": {
+          "hide_name": 1,
+          "bits": [ 9 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1832:Not$13": {
+          "hide_name": 1,
+          "bits": [ 11 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1832:Not$15": {
+          "hide_name": 1,
+          "bits": [ 12 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1832:Not$35": {
+          "hide_name": 1,
+          "bits": [ 18 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1832:Not$9": {
+          "hide_name": 1,
+          "bits": [ 14 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1836:ReduceOr$25": {
+          "hide_name": 1,
+          "bits": [ 15 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1836:ReduceOr$29": {
+          "hide_name": 1,
+          "bits": [ 16 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1836:ReduceOr$33": {
+          "hide_name": 1,
+          "bits": [ 17 ],
+          "attributes": {
+          }
+        },
+        "$procmux$5_CMP": {
+          "hide_name": 1,
+          "bits": [ 10 ],
+          "attributes": {
+          }
+        },
+        "$procmux$6_CMP": {
+          "hide_name": 1,
+          "bits": [ 8 ],
+          "attributes": {
+          }
+        },
+        "$procmux$7_CMP": {
+          "hide_name": 1,
+          "bits": [ 13 ],
+          "attributes": {
+          }
+        },
+        "in": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5 ],
+          "attributes": {
+            "src": "fourtotwo.v:2"
+          }
+        },
+        "out": {
+          "hide_name": 0,
+          "bits": [ 6, 7 ],
+          "attributes": {
+            "src": "fourtotwo.v:3"
+          }
+        }
+      }
+    }
+  }
+}

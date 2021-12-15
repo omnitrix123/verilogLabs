@@ -1,0 +1,130 @@
+{
+  "creator": "Yosys 0.9 (git sha1 1979e0b)",
+  "modules": {
+    "tlatch": {
+      "attributes": {
+        "top": 1,
+        "src": "tlatch.v:1"
+      },
+      "ports": {
+        "t": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "enable": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "q": {
+          "direction": "output",
+          "bits": [ 4 ]
+        }
+      },
+      "cells": {
+        "$and$tlatch.v:11$2": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "tlatch.v:11"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 3 ],
+            "B": [ 2 ],
+            "Y": [ 5 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:409:proc_dlatch$21": {
+          "hide_name": 1,
+          "type": "$dlatch",
+          "parameters": {
+            "EN_POLARITY": 1,
+            "WIDTH": 1
+          },
+          "attributes": {
+            "src": "tlatch.v:8"
+          },
+          "port_directions": {
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [ 6 ],
+            "EN": [ 5 ],
+            "Q": [ 4 ]
+          }
+        },
+        "$not$tlatch.v:13$3": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "tlatch.v:13"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 4 ],
+            "Y": [ 6 ]
+          }
+        }
+      },
+      "netnames": {
+        "$0\\q[0:0]": {
+          "hide_name": 1,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "tlatch.v:8"
+          }
+        },
+        "$and$tlatch.v:11$2_Y": {
+          "hide_name": 1,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "tlatch.v:11"
+          }
+        },
+        "enable": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "tlatch.v:2"
+          }
+        },
+        "q": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "init": 0,
+            "src": "tlatch.v:3"
+          }
+        },
+        "t": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "tlatch.v:2"
+          }
+        }
+      }
+    }
+  }
+}

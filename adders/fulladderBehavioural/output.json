@@ -1,0 +1,275 @@
+{
+  "creator": "Yosys 0.9 (git sha1 1979e0b)",
+  "modules": {
+    "fulladder": {
+      "attributes": {
+        "top": 1,
+        "src": "adder.v:1"
+      },
+      "ports": {
+        "sum": {
+          "direction": "output",
+          "bits": [ 2 ]
+        },
+        "cout": {
+          "direction": "output",
+          "bits": [ 3 ]
+        },
+        "a": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "b": {
+          "direction": "input",
+          "bits": [ 5 ]
+        },
+        "c": {
+          "direction": "input",
+          "bits": [ 6 ]
+        }
+      },
+      "cells": {
+        "$add$adder.v:4$1": {
+          "hide_name": 1,
+          "type": "$add",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "adder.v:4"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 4 ],
+            "B": [ 5 ],
+            "Y": [ 7 ]
+          }
+        },
+        "$add$adder.v:4$2": {
+          "hide_name": 1,
+          "type": "$add",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "adder.v:4"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 7 ],
+            "B": [ 6 ],
+            "Y": [ 2 ]
+          }
+        },
+        "$and$adder.v:5$3": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "adder.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 4 ],
+            "B": [ 5 ],
+            "Y": [ 8 ]
+          }
+        },
+        "$and$adder.v:5$4": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "adder.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 5 ],
+            "B": [ 6 ],
+            "Y": [ 9 ]
+          }
+        },
+        "$and$adder.v:5$6": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "adder.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6 ],
+            "B": [ 4 ],
+            "Y": [ 10 ]
+          }
+        },
+        "$or$adder.v:5$5": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "adder.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 8 ],
+            "B": [ 9 ],
+            "Y": [ 11 ]
+          }
+        },
+        "$or$adder.v:5$7": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "adder.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 11 ],
+            "B": [ 10 ],
+            "Y": [ 3 ]
+          }
+        }
+      },
+      "netnames": {
+        "$add$adder.v:4$1_Y": {
+          "hide_name": 1,
+          "bits": [ 7 ],
+          "attributes": {
+            "src": "adder.v:4"
+          }
+        },
+        "$and$adder.v:5$3_Y": {
+          "hide_name": 1,
+          "bits": [ 8 ],
+          "attributes": {
+            "src": "adder.v:5"
+          }
+        },
+        "$and$adder.v:5$4_Y": {
+          "hide_name": 1,
+          "bits": [ 9 ],
+          "attributes": {
+            "src": "adder.v:5"
+          }
+        },
+        "$and$adder.v:5$6_Y": {
+          "hide_name": 1,
+          "bits": [ 10 ],
+          "attributes": {
+            "src": "adder.v:5"
+          }
+        },
+        "$or$adder.v:5$5_Y": {
+          "hide_name": 1,
+          "bits": [ 11 ],
+          "attributes": {
+            "src": "adder.v:5"
+          }
+        },
+        "a": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "adder.v:2"
+          }
+        },
+        "b": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "adder.v:2"
+          }
+        },
+        "c": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "adder.v:2"
+          }
+        },
+        "cout": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "adder.v:3"
+          }
+        },
+        "sum": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "adder.v:3"
+          }
+        }
+      }
+    }
+  }
+}

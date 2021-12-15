@@ -1,0 +1,771 @@
+{
+  "creator": "Yosys 0.9 (git sha1 1979e0b)",
+  "modules": {
+    "jklatch": {
+      "attributes": {
+        "top": 1,
+        "src": "jklatch.v:1"
+      },
+      "ports": {
+        "j": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "k": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "enable": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "q": {
+          "direction": "output",
+          "bits": [ 5 ]
+        },
+        "qbar": {
+          "direction": "output",
+          "bits": [ 6 ]
+        }
+      },
+      "cells": {
+        "$and$jklatch.v:13$7": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "jklatch.v:13"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 4 ],
+            "B": [ 7 ],
+            "Y": [ 8 ]
+          }
+        },
+        "$and$jklatch.v:13$9": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "jklatch.v:13"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 8 ],
+            "B": [ 3 ],
+            "Y": [ 9 ]
+          }
+        },
+        "$and$jklatch.v:18$11": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "jklatch.v:18"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 4 ],
+            "B": [ 2 ],
+            "Y": [ 10 ]
+          }
+        },
+        "$and$jklatch.v:18$13": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "jklatch.v:18"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 10 ],
+            "B": [ 11 ],
+            "Y": [ 12 ]
+          }
+        },
+        "$and$jklatch.v:23$17": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "jklatch.v:23"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 10 ],
+            "B": [ 3 ],
+            "Y": [ 13 ]
+          }
+        },
+        "$and$jklatch.v:8$5": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "jklatch.v:8"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 8 ],
+            "B": [ 11 ],
+            "Y": [ 14 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:238:make_hold$42": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "jklatch.v:6"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 14 ],
+            "Y": [ 15 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:238:make_hold$44": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "jklatch.v:6"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9 ],
+            "Y": [ 16 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:238:make_hold$46": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "jklatch.v:6"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 12 ],
+            "Y": [ 17 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:238:make_hold$48": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "jklatch.v:6"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 13 ],
+            "Y": [ 18 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:247:make_hold$76": {
+          "hide_name": 1,
+          "type": "$reduce_or",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 2,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "jklatch.v:6"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 19, 14 ],
+            "Y": [ 20 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:251:make_hold$58": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "jklatch.v:6"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 17 ],
+            "B": [ 18 ],
+            "Y": [ 21 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:251:make_hold$64": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "jklatch.v:6"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 16 ],
+            "B": [ 21 ],
+            "Y": [ 22 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:251:make_hold$70": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "jklatch.v:6"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 15 ],
+            "B": [ 22 ],
+            "Y": [ 19 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:409:proc_dlatch$78": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 20 ],
+            "Y": [ 23 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:409:proc_dlatch$80": {
+          "hide_name": 1,
+          "type": "$dlatch",
+          "parameters": {
+            "EN_POLARITY": 1,
+            "WIDTH": 1
+          },
+          "attributes": {
+            "src": "jklatch.v:6"
+          },
+          "port_directions": {
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [ 24 ],
+            "EN": [ 23 ],
+            "Q": [ 6 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:409:proc_dlatch$83": {
+          "hide_name": 1,
+          "type": "$dlatch",
+          "parameters": {
+            "EN_POLARITY": 1,
+            "WIDTH": 1
+          },
+          "attributes": {
+            "src": "jklatch.v:6"
+          },
+          "port_directions": {
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [ 25 ],
+            "EN": [ 23 ],
+            "Q": [ 5 ]
+          }
+        },
+        "$eq$jklatch.v:13$6": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "jklatch.v:13"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2 ],
+            "Y": [ 7 ]
+          }
+        },
+        "$eq$jklatch.v:18$12": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "jklatch.v:18"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 3 ],
+            "Y": [ 11 ]
+          }
+        },
+        "$not$jklatch.v:25$18": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "jklatch.v:25"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 5 ],
+            "Y": [ 26 ]
+          }
+        },
+        "$not$jklatch.v:26$19": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "jklatch.v:26"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6 ],
+            "Y": [ 27 ]
+          }
+        },
+        "$procmux$23": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": 1
+          },
+          "attributes": {
+            "full_case": 1,
+            "src": "jklatch.v:18"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 26 ],
+            "B": [ "1" ],
+            "S": [ 12 ],
+            "Y": [ 28 ]
+          }
+        },
+        "$procmux$26": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": 1
+          },
+          "attributes": {
+            "full_case": 1,
+            "src": "jklatch.v:13"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 28 ],
+            "B": [ "0" ],
+            "S": [ 9 ],
+            "Y": [ 25 ]
+          }
+        },
+        "$procmux$34": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": 1
+          },
+          "attributes": {
+            "full_case": 1,
+            "src": "jklatch.v:18"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 27 ],
+            "B": [ "0" ],
+            "S": [ 12 ],
+            "Y": [ 29 ]
+          }
+        },
+        "$procmux$37": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": 1
+          },
+          "attributes": {
+            "full_case": 1,
+            "src": "jklatch.v:13"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 29 ],
+            "B": [ "1" ],
+            "S": [ 9 ],
+            "Y": [ 24 ]
+          }
+        }
+      },
+      "netnames": {
+        "$0\\q[0:0]": {
+          "hide_name": 1,
+          "bits": [ 25 ],
+          "attributes": {
+            "src": "jklatch.v:6"
+          }
+        },
+        "$0\\qbar[0:0]": {
+          "hide_name": 1,
+          "bits": [ 24 ],
+          "attributes": {
+            "src": "jklatch.v:6"
+          }
+        },
+        "$and$jklatch.v:13$7_Y": {
+          "hide_name": 1,
+          "bits": [ 8 ],
+          "attributes": {
+            "src": "jklatch.v:13"
+          }
+        },
+        "$and$jklatch.v:13$9_Y": {
+          "hide_name": 1,
+          "bits": [ 9 ],
+          "attributes": {
+            "src": "jklatch.v:13"
+          }
+        },
+        "$and$jklatch.v:18$11_Y": {
+          "hide_name": 1,
+          "bits": [ 10 ],
+          "attributes": {
+            "src": "jklatch.v:18"
+          }
+        },
+        "$and$jklatch.v:18$13_Y": {
+          "hide_name": 1,
+          "bits": [ 12 ],
+          "attributes": {
+            "src": "jklatch.v:18"
+          }
+        },
+        "$and$jklatch.v:23$17_Y": {
+          "hide_name": 1,
+          "bits": [ 13 ],
+          "attributes": {
+            "src": "jklatch.v:23"
+          }
+        },
+        "$and$jklatch.v:8$5_Y": {
+          "hide_name": 1,
+          "bits": [ 14 ],
+          "attributes": {
+            "src": "jklatch.v:8"
+          }
+        },
+        "$auto$rtlil.cc:1832:Not$43": {
+          "hide_name": 1,
+          "bits": [ 15 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1832:Not$45": {
+          "hide_name": 1,
+          "bits": [ 16 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1832:Not$47": {
+          "hide_name": 1,
+          "bits": [ 17 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1832:Not$49": {
+          "hide_name": 1,
+          "bits": [ 18 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1832:Not$79": {
+          "hide_name": 1,
+          "bits": [ 23 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1836:ReduceOr$61": {
+          "hide_name": 1,
+          "bits": [ 21 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1836:ReduceOr$67": {
+          "hide_name": 1,
+          "bits": [ 22 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1836:ReduceOr$77": {
+          "hide_name": 1,
+          "bits": [ 20 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1862:And$71": {
+          "hide_name": 1,
+          "bits": [ 19 ],
+          "attributes": {
+          }
+        },
+        "$eq$jklatch.v:13$6_Y": {
+          "hide_name": 1,
+          "bits": [ 7 ],
+          "attributes": {
+            "src": "jklatch.v:13"
+          }
+        },
+        "$eq$jklatch.v:18$12_Y": {
+          "hide_name": 1,
+          "bits": [ 11 ],
+          "attributes": {
+            "src": "jklatch.v:18"
+          }
+        },
+        "$not$jklatch.v:25$18_Y": {
+          "hide_name": 1,
+          "bits": [ 26 ],
+          "attributes": {
+            "src": "jklatch.v:25"
+          }
+        },
+        "$not$jklatch.v:26$19_Y": {
+          "hide_name": 1,
+          "bits": [ 27 ],
+          "attributes": {
+            "src": "jklatch.v:26"
+          }
+        },
+        "$procmux$23_Y": {
+          "hide_name": 1,
+          "bits": [ 28 ],
+          "attributes": {
+          }
+        },
+        "$procmux$34_Y": {
+          "hide_name": 1,
+          "bits": [ 29 ],
+          "attributes": {
+          }
+        },
+        "enable": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "jklatch.v:2"
+          }
+        },
+        "j": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "jklatch.v:2"
+          }
+        },
+        "k": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "jklatch.v:2"
+          }
+        },
+        "q": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "jklatch.v:3"
+          }
+        },
+        "qbar": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "jklatch.v:3"
+          }
+        }
+      }
+    }
+  }
+}

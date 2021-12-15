@@ -1,5 +1,5 @@
-module downcount(clk,reset,preset,mode,count);
-   input reset,preset,clk,mode;
+module downcount(clk,preset,count);
+   input preset,clk;
    output [4:0]count;
    reg [4:0]count;
    
@@ -8,14 +8,12 @@ module downcount(clk,reset,preset,mode,count);
    always@(posedge clk)
     begin
      
-     if (reset)
-       count <= 5'b00000;
-     else if (preset)
+     if (preset)
        count <= 5'b11111;
-     else if (mode == 1) //up counter
-       count <= count + 3;
-     else if (mode == 0) //down counter
-       count <= count - 2;
+     else
+       count <= count - 1;
+       
     end
+ 
  endmodule
     

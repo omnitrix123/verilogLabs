@@ -1,0 +1,578 @@
+{
+  "creator": "Yosys 0.9 (git sha1 1979e0b)",
+  "modules": {
+    "jkff": {
+      "attributes": {
+        "top": 1,
+        "src": "jkff.v:1"
+      },
+      "ports": {
+        "j": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "k": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "clock": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "q": {
+          "direction": "output",
+          "bits": [ 5 ]
+        },
+        "qbar": {
+          "direction": "output",
+          "bits": [ 6 ]
+        }
+      },
+      "cells": {
+        "$and$jkff.v:13$7": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "jkff.v:13"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 7 ],
+            "B": [ 3 ],
+            "Y": [ 8 ]
+          }
+        },
+        "$and$jkff.v:18$10": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "jkff.v:18"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2 ],
+            "B": [ 9 ],
+            "Y": [ 10 ]
+          }
+        },
+        "$and$jkff.v:23$13": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "jkff.v:23"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2 ],
+            "B": [ 3 ],
+            "Y": [ 11 ]
+          }
+        },
+        "$and$jkff.v:8$4": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "jkff.v:8"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 7 ],
+            "B": [ 9 ],
+            "Y": [ 12 ]
+          }
+        },
+        "$eq$jkff.v:13$5": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "jkff.v:13"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2 ],
+            "Y": [ 7 ]
+          }
+        },
+        "$eq$jkff.v:18$9": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "jkff.v:18"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 3 ],
+            "Y": [ 9 ]
+          }
+        },
+        "$not$jkff.v:25$14": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "jkff.v:25"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 5 ],
+            "Y": [ 13 ]
+          }
+        },
+        "$not$jkff.v:26$15": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "jkff.v:26"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6 ],
+            "Y": [ 14 ]
+          }
+        },
+        "$procdff$38": {
+          "hide_name": 1,
+          "type": "$dff",
+          "parameters": {
+            "CLK_POLARITY": 1,
+            "WIDTH": 1
+          },
+          "attributes": {
+            "src": "jkff.v:6"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 4 ],
+            "D": [ 15 ],
+            "Q": [ 6 ]
+          }
+        },
+        "$procdff$39": {
+          "hide_name": 1,
+          "type": "$dff",
+          "parameters": {
+            "CLK_POLARITY": 1,
+            "WIDTH": 1
+          },
+          "attributes": {
+            "src": "jkff.v:6"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 4 ],
+            "D": [ 16 ],
+            "Q": [ 5 ]
+          }
+        },
+        "$procmux$16": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": 1
+          },
+          "attributes": {
+            "src": "jkff.v:23"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 5 ],
+            "B": [ 13 ],
+            "S": [ 11 ],
+            "Y": [ 17 ]
+          }
+        },
+        "$procmux$19": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": 1
+          },
+          "attributes": {
+            "full_case": 1,
+            "src": "jkff.v:18"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 17 ],
+            "B": [ "1" ],
+            "S": [ 10 ],
+            "Y": [ 18 ]
+          }
+        },
+        "$procmux$22": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": 1
+          },
+          "attributes": {
+            "full_case": 1,
+            "src": "jkff.v:13"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 18 ],
+            "B": [ "0" ],
+            "S": [ 8 ],
+            "Y": [ 19 ]
+          }
+        },
+        "$procmux$25": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": 1
+          },
+          "attributes": {
+            "full_case": 1,
+            "src": "jkff.v:8"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 19 ],
+            "B": [ 5 ],
+            "S": [ 12 ],
+            "Y": [ 16 ]
+          }
+        },
+        "$procmux$27": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": 1
+          },
+          "attributes": {
+            "src": "jkff.v:23"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6 ],
+            "B": [ 14 ],
+            "S": [ 11 ],
+            "Y": [ 20 ]
+          }
+        },
+        "$procmux$30": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": 1
+          },
+          "attributes": {
+            "full_case": 1,
+            "src": "jkff.v:18"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 20 ],
+            "B": [ "0" ],
+            "S": [ 10 ],
+            "Y": [ 21 ]
+          }
+        },
+        "$procmux$33": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": 1
+          },
+          "attributes": {
+            "full_case": 1,
+            "src": "jkff.v:13"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 21 ],
+            "B": [ "1" ],
+            "S": [ 8 ],
+            "Y": [ 22 ]
+          }
+        },
+        "$procmux$36": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": 1
+          },
+          "attributes": {
+            "full_case": 1,
+            "src": "jkff.v:8"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 22 ],
+            "B": [ 6 ],
+            "S": [ 12 ],
+            "Y": [ 15 ]
+          }
+        }
+      },
+      "netnames": {
+        "$0\\q[0:0]": {
+          "hide_name": 1,
+          "bits": [ 16 ],
+          "attributes": {
+            "src": "jkff.v:6"
+          }
+        },
+        "$0\\qbar[0:0]": {
+          "hide_name": 1,
+          "bits": [ 15 ],
+          "attributes": {
+            "src": "jkff.v:6"
+          }
+        },
+        "$and$jkff.v:13$7_Y": {
+          "hide_name": 1,
+          "bits": [ 8 ],
+          "attributes": {
+            "src": "jkff.v:13"
+          }
+        },
+        "$and$jkff.v:18$10_Y": {
+          "hide_name": 1,
+          "bits": [ 10 ],
+          "attributes": {
+            "src": "jkff.v:18"
+          }
+        },
+        "$and$jkff.v:23$13_Y": {
+          "hide_name": 1,
+          "bits": [ 11 ],
+          "attributes": {
+            "src": "jkff.v:23"
+          }
+        },
+        "$and$jkff.v:8$4_Y": {
+          "hide_name": 1,
+          "bits": [ 12 ],
+          "attributes": {
+            "src": "jkff.v:8"
+          }
+        },
+        "$eq$jkff.v:13$5_Y": {
+          "hide_name": 1,
+          "bits": [ 7 ],
+          "attributes": {
+            "src": "jkff.v:13"
+          }
+        },
+        "$eq$jkff.v:18$9_Y": {
+          "hide_name": 1,
+          "bits": [ 9 ],
+          "attributes": {
+            "src": "jkff.v:18"
+          }
+        },
+        "$not$jkff.v:25$14_Y": {
+          "hide_name": 1,
+          "bits": [ 13 ],
+          "attributes": {
+            "src": "jkff.v:25"
+          }
+        },
+        "$not$jkff.v:26$15_Y": {
+          "hide_name": 1,
+          "bits": [ 14 ],
+          "attributes": {
+            "src": "jkff.v:26"
+          }
+        },
+        "$procmux$16_Y": {
+          "hide_name": 1,
+          "bits": [ 17 ],
+          "attributes": {
+          }
+        },
+        "$procmux$19_Y": {
+          "hide_name": 1,
+          "bits": [ 18 ],
+          "attributes": {
+          }
+        },
+        "$procmux$22_Y": {
+          "hide_name": 1,
+          "bits": [ 19 ],
+          "attributes": {
+          }
+        },
+        "$procmux$27_Y": {
+          "hide_name": 1,
+          "bits": [ 20 ],
+          "attributes": {
+          }
+        },
+        "$procmux$30_Y": {
+          "hide_name": 1,
+          "bits": [ 21 ],
+          "attributes": {
+          }
+        },
+        "$procmux$33_Y": {
+          "hide_name": 1,
+          "bits": [ 22 ],
+          "attributes": {
+          }
+        },
+        "clock": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "jkff.v:2"
+          }
+        },
+        "j": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "jkff.v:2"
+          }
+        },
+        "k": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "jkff.v:2"
+          }
+        },
+        "q": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "jkff.v:3"
+          }
+        },
+        "qbar": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "jkff.v:3"
+          }
+        }
+      }
+    }
+  }
+}

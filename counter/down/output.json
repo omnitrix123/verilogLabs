@@ -1,0 +1,133 @@
+{
+  "creator": "Yosys 0.9 (git sha1 1979e0b)",
+  "modules": {
+    "downcount": {
+      "attributes": {
+        "top": 1,
+        "src": "downcount.v:1"
+      },
+      "ports": {
+        "clk": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "preset": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "count": {
+          "direction": "output",
+          "bits": [ 4, 5, 6, 7, 8 ]
+        }
+      },
+      "cells": {
+        "$procdff$6": {
+          "hide_name": 1,
+          "type": "$dff",
+          "parameters": {
+            "CLK_POLARITY": 1,
+            "WIDTH": 5
+          },
+          "attributes": {
+            "src": "downcount.v:8"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "D": [ 9, 10, 11, 12, 13 ],
+            "Q": [ 4, 5, 6, 7, 8 ]
+          }
+        },
+        "$procmux$4": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": 5
+          },
+          "attributes": {
+            "full_case": 1,
+            "src": "downcount.v:11"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 14, 15, 16, 17, 18 ],
+            "B": [ "1", "1", "1", "1", "1" ],
+            "S": [ 3 ],
+            "Y": [ 9, 10, 11, 12, 13 ]
+          }
+        },
+        "$sub$downcount.v:14$2": {
+          "hide_name": 1,
+          "type": "$sub",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 5,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 5
+          },
+          "attributes": {
+            "src": "downcount.v:14"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 4, 5, 6, 7, 8 ],
+            "B": [ "1" ],
+            "Y": [ 14, 15, 16, 17, 18 ]
+          }
+        }
+      },
+      "netnames": {
+        "$0\\count[4:0]": {
+          "hide_name": 1,
+          "bits": [ 9, 10, 11, 12, 13 ],
+          "attributes": {
+            "src": "downcount.v:8"
+          }
+        },
+        "$auto$wreduce.cc:455:run$7": {
+          "hide_name": 1,
+          "bits": [ 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45 ],
+          "attributes": {
+            "src": "downcount.v:14",
+            "unused_bits": "5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"
+          }
+        },
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "downcount.v:2"
+          }
+        },
+        "count": {
+          "hide_name": 0,
+          "bits": [ 4, 5, 6, 7, 8 ],
+          "attributes": {
+            "src": "downcount.v:3"
+          }
+        },
+        "preset": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "downcount.v:2"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "creator": "Yosys 0.9 (git sha1 1979e0b)",
+  "modules": {
+    "johnsonCounter": {
+      "attributes": {
+        "top": 1,
+        "src": "johnsonCounter.v:1"
+      },
+      "ports": {
+        "clk": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "init": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "count": {
+          "direction": "output",
+          "bits": [ 4, 5, 6, 7 ]
+        }
+      },
+      "cells": {
+        "$not$johnsonCounter.v:12$3": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "johnsonCounter.v:12"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 7 ],
+            "Y": [ 8 ]
+          }
+        },
+        "$procdff$10": {
+          "hide_name": 1,
+          "type": "$dff",
+          "parameters": {
+            "CLK_POLARITY": 1,
+            "WIDTH": 4
+          },
+          "attributes": {
+            "src": "johnsonCounter.v:5"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "D": [ 9, 10, 11, 12 ],
+            "Q": [ 4, 5, 6, 7 ]
+          }
+        },
+        "$procmux$5": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": 3
+          },
+          "attributes": {
+            "full_case": 1,
+            "src": "johnsonCounter.v:7"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 4, 5, 6 ],
+            "B": [ "0", "0", "0" ],
+            "S": [ 3 ],
+            "Y": [ 10, 11, 12 ]
+          }
+        },
+        "$procmux$8": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": 1
+          },
+          "attributes": {
+            "full_case": 1,
+            "src": "johnsonCounter.v:7"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 8 ],
+            "B": [ "0" ],
+            "S": [ 3 ],
+            "Y": [ 9 ]
+          }
+        }
+      },
+      "netnames": {
+        "$0\\count[3:0]": {
+          "hide_name": 1,
+          "bits": [ 9, 10, 11, 12 ],
+          "attributes": {
+            "src": "johnsonCounter.v:5"
+          }
+        },
+        "$not$johnsonCounter.v:12$3_Y": {
+          "hide_name": 1,
+          "bits": [ 8 ],
+          "attributes": {
+            "src": "johnsonCounter.v:12"
+          }
+        },
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "johnsonCounter.v:2"
+          }
+        },
+        "count": {
+          "hide_name": 0,
+          "bits": [ 4, 5, 6, 7 ],
+          "attributes": {
+            "src": "johnsonCounter.v:3"
+          }
+        },
+        "init": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "johnsonCounter.v:2"
+          }
+        }
+      }
+    }
+  }
+}

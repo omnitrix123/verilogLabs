@@ -1,0 +1,1799 @@
+{
+  "creator": "Yosys 0.9 (git sha1 1979e0b)",
+  "modules": {
+    "eighttothree": {
+      "attributes": {
+        "top": 1,
+        "src": "eighttothree.v:1"
+      },
+      "ports": {
+        "in": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9 ]
+        },
+        "out": {
+          "direction": "output",
+          "bits": [ 10, 11, 12 ]
+        }
+      },
+      "cells": {
+        "$auto$proc_dlatch.cc:238:make_hold$118": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 13 ],
+            "Y": [ 14 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:238:make_hold$122": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 15 ],
+            "Y": [ 16 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:238:make_hold$128": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 17 ],
+            "Y": [ 18 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:238:make_hold$136": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 19 ],
+            "Y": [ 20 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:238:make_hold$146": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 21 ],
+            "Y": [ 22 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:238:make_hold$158": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 23 ],
+            "Y": [ 24 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:238:make_hold$172": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 25 ],
+            "Y": [ 26 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:238:make_hold$188": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 27 ],
+            "Y": [ 28 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:251:make_hold$198": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 26 ],
+            "B": [ 28 ],
+            "Y": [ 29 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:251:make_hold$204": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 24 ],
+            "B": [ 29 ],
+            "Y": [ 30 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:251:make_hold$210": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 22 ],
+            "B": [ 30 ],
+            "Y": [ 31 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:251:make_hold$216": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 20 ],
+            "B": [ 31 ],
+            "Y": [ 32 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:251:make_hold$222": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 18 ],
+            "B": [ 32 ],
+            "Y": [ 33 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:251:make_hold$228": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 16 ],
+            "B": [ 33 ],
+            "Y": [ 34 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:251:make_hold$234": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 14 ],
+            "B": [ 34 ],
+            "Y": [ 35 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:251:make_hold$240": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 26 ],
+            "B": [ 35 ],
+            "Y": [ 36 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:251:make_hold$246": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 24 ],
+            "B": [ 36 ],
+            "Y": [ 37 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:251:make_hold$252": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 22 ],
+            "B": [ 37 ],
+            "Y": [ 38 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:251:make_hold$258": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 20 ],
+            "B": [ 38 ],
+            "Y": [ 39 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:251:make_hold$264": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 18 ],
+            "B": [ 39 ],
+            "Y": [ 40 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:251:make_hold$270": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 16 ],
+            "B": [ 40 ],
+            "Y": [ 41 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:251:make_hold$276": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 14 ],
+            "B": [ 41 ],
+            "Y": [ 42 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:251:make_hold$282": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 24 ],
+            "B": [ 42 ],
+            "Y": [ 43 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:251:make_hold$288": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 22 ],
+            "B": [ 43 ],
+            "Y": [ 44 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:251:make_hold$294": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 20 ],
+            "B": [ 44 ],
+            "Y": [ 45 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:251:make_hold$300": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 18 ],
+            "B": [ 45 ],
+            "Y": [ 46 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:251:make_hold$306": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 16 ],
+            "B": [ 46 ],
+            "Y": [ 47 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:251:make_hold$312": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 14 ],
+            "B": [ 47 ],
+            "Y": [ 48 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:251:make_hold$318": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 22 ],
+            "B": [ 48 ],
+            "Y": [ 49 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:251:make_hold$324": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 20 ],
+            "B": [ 49 ],
+            "Y": [ 50 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:251:make_hold$330": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 18 ],
+            "B": [ 50 ],
+            "Y": [ 51 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:251:make_hold$336": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 16 ],
+            "B": [ 51 ],
+            "Y": [ 52 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:251:make_hold$342": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 14 ],
+            "B": [ 52 ],
+            "Y": [ 53 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:251:make_hold$348": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 20 ],
+            "B": [ 53 ],
+            "Y": [ 54 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:251:make_hold$354": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 18 ],
+            "B": [ 54 ],
+            "Y": [ 55 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:251:make_hold$360": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 16 ],
+            "B": [ 55 ],
+            "Y": [ 56 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:251:make_hold$366": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 14 ],
+            "B": [ 56 ],
+            "Y": [ 57 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:251:make_hold$372": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 18 ],
+            "B": [ 57 ],
+            "Y": [ 58 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:251:make_hold$378": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 16 ],
+            "B": [ 58 ],
+            "Y": [ 59 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:251:make_hold$384": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 14 ],
+            "B": [ 59 ],
+            "Y": [ 60 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:251:make_hold$390": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 16 ],
+            "B": [ 60 ],
+            "Y": [ 61 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:251:make_hold$396": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 14 ],
+            "B": [ 61 ],
+            "Y": [ 62 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:251:make_hold$402": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 14 ],
+            "B": [ 62 ],
+            "Y": [ 63 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:409:proc_dlatch$406": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 63 ],
+            "Y": [ 64 ]
+          }
+        },
+        "$auto$proc_dlatch.cc:409:proc_dlatch$408": {
+          "hide_name": 1,
+          "type": "$dlatch",
+          "parameters": {
+            "EN_POLARITY": 1,
+            "WIDTH": 3
+          },
+          "attributes": {
+            "src": "eighttothree.v:5"
+          },
+          "port_directions": {
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "D": [ 65, 66, 67 ],
+            "EN": [ 64 ],
+            "Q": [ 10, 11, 12 ]
+          }
+        },
+        "$eq$eighttothree.v:11$4": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 8,
+            "B_SIGNED": 0,
+            "B_WIDTH": 3,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:11"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8, 9 ],
+            "B": [ "0", "0", "1" ],
+            "Y": [ 17 ]
+          }
+        },
+        "$eq$eighttothree.v:13$5": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 8,
+            "B_SIGNED": 0,
+            "B_WIDTH": 4,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:13"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8, 9 ],
+            "B": [ "0", "0", "0", "1" ],
+            "Y": [ 19 ]
+          }
+        },
+        "$eq$eighttothree.v:15$6": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 8,
+            "B_SIGNED": 0,
+            "B_WIDTH": 5,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:15"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8, 9 ],
+            "B": [ "0", "0", "0", "0", "1" ],
+            "Y": [ 21 ]
+          }
+        },
+        "$eq$eighttothree.v:17$7": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 8,
+            "B_SIGNED": 0,
+            "B_WIDTH": 6,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:17"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8, 9 ],
+            "B": [ "0", "0", "0", "0", "0", "1" ],
+            "Y": [ 23 ]
+          }
+        },
+        "$eq$eighttothree.v:19$8": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 8,
+            "B_SIGNED": 0,
+            "B_WIDTH": 7,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:19"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8, 9 ],
+            "B": [ "0", "0", "0", "0", "0", "0", "1" ],
+            "Y": [ 25 ]
+          }
+        },
+        "$eq$eighttothree.v:21$9": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 8,
+            "B_SIGNED": 0,
+            "B_WIDTH": 8,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:21"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8, 9 ],
+            "B": [ "0", "0", "0", "0", "0", "0", "0", "1" ],
+            "Y": [ 27 ]
+          }
+        },
+        "$eq$eighttothree.v:7$2": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 8,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:7"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8, 9 ],
+            "B": [ "1" ],
+            "Y": [ 13 ]
+          }
+        },
+        "$eq$eighttothree.v:9$3": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 8,
+            "B_SIGNED": 0,
+            "B_WIDTH": 2,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "eighttothree.v:9"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2, 3, 4, 5, 6, 7, 8, 9 ],
+            "B": [ "0", "1" ],
+            "Y": [ 15 ]
+          }
+        },
+        "$procmux$101": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": 3
+          },
+          "attributes": {
+            "full_case": 1,
+            "src": "eighttothree.v:11"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 68, 69, 70 ],
+            "B": [ "0", "1", "0" ],
+            "S": [ 17 ],
+            "Y": [ 71, 72, 73 ]
+          }
+        },
+        "$procmux$110": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": 3
+          },
+          "attributes": {
+            "full_case": 1,
+            "src": "eighttothree.v:9"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 71, 72, 73 ],
+            "B": [ "1", "0", "0" ],
+            "S": [ 15 ],
+            "Y": [ 74, 75, 76 ]
+          }
+        },
+        "$procmux$116": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": 3
+          },
+          "attributes": {
+            "full_case": 1,
+            "src": "eighttothree.v:7"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 74, 75, 76 ],
+            "B": [ "0", "0", "0" ],
+            "S": [ 13 ],
+            "Y": [ 65, 66, 67 ]
+          }
+        },
+        "$procmux$35": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": 1
+          },
+          "attributes": {
+            "full_case": 1,
+            "src": "eighttothree.v:19"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "1" ],
+            "B": [ "0" ],
+            "S": [ 25 ],
+            "Y": [ 77 ]
+          }
+        },
+        "$procmux$56": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": 2
+          },
+          "attributes": {
+            "full_case": 1,
+            "src": "eighttothree.v:17"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 77, "1" ],
+            "B": [ "1", "0" ],
+            "S": [ 23 ],
+            "Y": [ 78, 79 ]
+          }
+        },
+        "$procmux$74": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": 2
+          },
+          "attributes": {
+            "full_case": 1,
+            "src": "eighttothree.v:15"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 78, 79 ],
+            "B": [ "0", "0" ],
+            "S": [ 21 ],
+            "Y": [ 80, 81 ]
+          }
+        },
+        "$procmux$89": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": 3
+          },
+          "attributes": {
+            "full_case": 1,
+            "src": "eighttothree.v:13"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 80, 81, "1" ],
+            "B": [ "1", "1", "0" ],
+            "S": [ 19 ],
+            "Y": [ 68, 69, 70 ]
+          }
+        }
+      },
+      "netnames": {
+        "$0\\out[2:0]": {
+          "hide_name": 1,
+          "bits": [ 65, 66, 67 ],
+          "attributes": {
+            "src": "eighttothree.v:5"
+          }
+        },
+        "$2\\out[2:0]": {
+          "hide_name": 1,
+          "bits": [ 74, 75, 76 ],
+          "attributes": {
+            "src": "eighttothree.v:5"
+          }
+        },
+        "$3\\out[2:0]": {
+          "hide_name": 1,
+          "bits": [ 71, 72, 73 ],
+          "attributes": {
+            "src": "eighttothree.v:5"
+          }
+        },
+        "$4\\out[2:0]": {
+          "hide_name": 1,
+          "bits": [ 68, 69, 70 ],
+          "attributes": {
+            "src": "eighttothree.v:5"
+          }
+        },
+        "$5\\out[2:0]": {
+          "hide_name": 1,
+          "bits": [ 80, 81 ],
+          "attributes": {
+          }
+        },
+        "$6\\out[2:0]": {
+          "hide_name": 1,
+          "bits": [ 78, 79 ],
+          "attributes": {
+          }
+        },
+        "$7\\out[2:0]": {
+          "hide_name": 1,
+          "bits": [ 77, "1", "1" ],
+          "attributes": {
+            "src": "eighttothree.v:5"
+          }
+        },
+        "$auto$rtlil.cc:1832:Not$119": {
+          "hide_name": 1,
+          "bits": [ 14 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1832:Not$123": {
+          "hide_name": 1,
+          "bits": [ 16 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1832:Not$129": {
+          "hide_name": 1,
+          "bits": [ 18 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1832:Not$137": {
+          "hide_name": 1,
+          "bits": [ 20 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1832:Not$147": {
+          "hide_name": 1,
+          "bits": [ 22 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1832:Not$159": {
+          "hide_name": 1,
+          "bits": [ 24 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1832:Not$173": {
+          "hide_name": 1,
+          "bits": [ 26 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1832:Not$189": {
+          "hide_name": 1,
+          "bits": [ 28 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1832:Not$407": {
+          "hide_name": 1,
+          "bits": [ 64 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1836:ReduceOr$201": {
+          "hide_name": 1,
+          "bits": [ 29 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1836:ReduceOr$207": {
+          "hide_name": 1,
+          "bits": [ 30 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1836:ReduceOr$213": {
+          "hide_name": 1,
+          "bits": [ 31 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1836:ReduceOr$219": {
+          "hide_name": 1,
+          "bits": [ 32 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1836:ReduceOr$225": {
+          "hide_name": 1,
+          "bits": [ 33 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1836:ReduceOr$231": {
+          "hide_name": 1,
+          "bits": [ 34 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1836:ReduceOr$237": {
+          "hide_name": 1,
+          "bits": [ 35 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1836:ReduceOr$243": {
+          "hide_name": 1,
+          "bits": [ 36 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1836:ReduceOr$249": {
+          "hide_name": 1,
+          "bits": [ 37 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1836:ReduceOr$255": {
+          "hide_name": 1,
+          "bits": [ 38 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1836:ReduceOr$261": {
+          "hide_name": 1,
+          "bits": [ 39 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1836:ReduceOr$267": {
+          "hide_name": 1,
+          "bits": [ 40 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1836:ReduceOr$273": {
+          "hide_name": 1,
+          "bits": [ 41 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1836:ReduceOr$279": {
+          "hide_name": 1,
+          "bits": [ 42 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1836:ReduceOr$285": {
+          "hide_name": 1,
+          "bits": [ 43 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1836:ReduceOr$291": {
+          "hide_name": 1,
+          "bits": [ 44 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1836:ReduceOr$297": {
+          "hide_name": 1,
+          "bits": [ 45 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1836:ReduceOr$303": {
+          "hide_name": 1,
+          "bits": [ 46 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1836:ReduceOr$309": {
+          "hide_name": 1,
+          "bits": [ 47 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1836:ReduceOr$315": {
+          "hide_name": 1,
+          "bits": [ 48 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1836:ReduceOr$321": {
+          "hide_name": 1,
+          "bits": [ 49 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1836:ReduceOr$327": {
+          "hide_name": 1,
+          "bits": [ 50 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1836:ReduceOr$333": {
+          "hide_name": 1,
+          "bits": [ 51 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1836:ReduceOr$339": {
+          "hide_name": 1,
+          "bits": [ 52 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1836:ReduceOr$345": {
+          "hide_name": 1,
+          "bits": [ 53 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1836:ReduceOr$351": {
+          "hide_name": 1,
+          "bits": [ 54 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1836:ReduceOr$357": {
+          "hide_name": 1,
+          "bits": [ 55 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1836:ReduceOr$363": {
+          "hide_name": 1,
+          "bits": [ 56 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1836:ReduceOr$369": {
+          "hide_name": 1,
+          "bits": [ 57 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1836:ReduceOr$375": {
+          "hide_name": 1,
+          "bits": [ 58 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1836:ReduceOr$381": {
+          "hide_name": 1,
+          "bits": [ 59 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1836:ReduceOr$387": {
+          "hide_name": 1,
+          "bits": [ 60 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1836:ReduceOr$393": {
+          "hide_name": 1,
+          "bits": [ 61 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1836:ReduceOr$399": {
+          "hide_name": 1,
+          "bits": [ 62 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:1836:ReduceOr$405": {
+          "hide_name": 1,
+          "bits": [ 63 ],
+          "attributes": {
+          }
+        },
+        "$eq$eighttothree.v:11$4_Y": {
+          "hide_name": 1,
+          "bits": [ 17 ],
+          "attributes": {
+            "src": "eighttothree.v:11"
+          }
+        },
+        "$eq$eighttothree.v:13$5_Y": {
+          "hide_name": 1,
+          "bits": [ 19 ],
+          "attributes": {
+            "src": "eighttothree.v:13"
+          }
+        },
+        "$eq$eighttothree.v:15$6_Y": {
+          "hide_name": 1,
+          "bits": [ 21 ],
+          "attributes": {
+            "src": "eighttothree.v:15"
+          }
+        },
+        "$eq$eighttothree.v:17$7_Y": {
+          "hide_name": 1,
+          "bits": [ 23 ],
+          "attributes": {
+            "src": "eighttothree.v:17"
+          }
+        },
+        "$eq$eighttothree.v:19$8_Y": {
+          "hide_name": 1,
+          "bits": [ 25 ],
+          "attributes": {
+            "src": "eighttothree.v:19"
+          }
+        },
+        "$eq$eighttothree.v:21$9_Y": {
+          "hide_name": 1,
+          "bits": [ 27 ],
+          "attributes": {
+            "src": "eighttothree.v:21"
+          }
+        },
+        "$eq$eighttothree.v:7$2_Y": {
+          "hide_name": 1,
+          "bits": [ 13 ],
+          "attributes": {
+            "src": "eighttothree.v:7"
+          }
+        },
+        "$eq$eighttothree.v:9$3_Y": {
+          "hide_name": 1,
+          "bits": [ 15 ],
+          "attributes": {
+            "src": "eighttothree.v:9"
+          }
+        },
+        "in": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9 ],
+          "attributes": {
+            "src": "eighttothree.v:2"
+          }
+        },
+        "out": {
+          "hide_name": 0,
+          "bits": [ 10, 11, 12 ],
+          "attributes": {
+            "src": "eighttothree.v:3"
+          }
+        }
+      }
+    }
+  }
+}

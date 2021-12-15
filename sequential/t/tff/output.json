@@ -1,0 +1,129 @@
+{
+  "creator": "Yosys 0.9 (git sha1 1979e0b)",
+  "modules": {
+    "tff": {
+      "attributes": {
+        "top": 1,
+        "src": "tff.v:1"
+      },
+      "ports": {
+        "t": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "clock": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "q": {
+          "direction": "output",
+          "bits": [ 4 ]
+        }
+      },
+      "cells": {
+        "$not$tff.v:11$2": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "tff.v:11"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 4 ],
+            "Y": [ 5 ]
+          }
+        },
+        "$procdff$7": {
+          "hide_name": 1,
+          "type": "$dff",
+          "parameters": {
+            "CLK_POLARITY": 1,
+            "WIDTH": 1
+          },
+          "attributes": {
+            "src": "tff.v:8"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 3 ],
+            "D": [ 6 ],
+            "Q": [ 4 ]
+          }
+        },
+        "$procmux$5": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": 1
+          },
+          "attributes": {
+            "full_case": 1,
+            "src": "tff.v:10"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 4 ],
+            "B": [ 5 ],
+            "S": [ 2 ],
+            "Y": [ 6 ]
+          }
+        }
+      },
+      "netnames": {
+        "$0\\q[0:0]": {
+          "hide_name": 1,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "tff.v:8"
+          }
+        },
+        "$not$tff.v:11$2_Y": {
+          "hide_name": 1,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "tff.v:11"
+          }
+        },
+        "clock": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "tff.v:2"
+          }
+        },
+        "q": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "init": 0,
+            "src": "tff.v:3"
+          }
+        },
+        "t": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "tff.v:2"
+          }
+        }
+      }
+    }
+  }
+}
