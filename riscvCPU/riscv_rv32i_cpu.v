@@ -1,6 +1,4 @@
-//
-// RISC-V RV32I CPU, By Li Yamin, yamin@ieee.org, Fri Jun 28 09:19:13 JST 2019
-//
+
 module riscv_rv32i_cpu (clk,clrn,pc,inst,m_addr,d_f_mem,d_t_mem,write,
                                  io_rdn,io_wrn,rvram,wvram,read);
     input         clk, clrn;                                 // clock and reset
