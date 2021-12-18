@@ -1,0 +1,59 @@
+$date
+	Wed Dec 15 18:05:50 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module testbench $end
+$var wire 1 ! diff $end
+$var wire 1 " borrow $end
+$var reg 1 # a $end
+$var reg 1 $ b $end
+$var reg 1 % cin $end
+$scope module H1 $end
+$var wire 1 # a $end
+$var wire 1 $ b $end
+$var wire 1 " borrow $end
+$var wire 1 % cin $end
+$var wire 1 ! diff $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0%
+0$
+0#
+0"
+0!
+$end
+#2
+1"
+1!
+1%
+#4
+0%
+1$
+#6
+0!
+1%
+#8
+0"
+1!
+0%
+0$
+1#
+#10
+0!
+1%
+#12
+0%
+1$
+#14
+1"
+1!
+1%
+#16

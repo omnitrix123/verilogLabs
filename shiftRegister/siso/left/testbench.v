@@ -2,7 +2,7 @@ module testbench;
   reg si,clk;
   wire so;
   
-  sisoright s1 (si,clk,so);
+  sisoleft s1 (si,clk,so);
   
   initial clk=0;
   always clk = #1 ~clk;
@@ -12,11 +12,11 @@ module testbench;
       $monitor($time,"si=%b,clk=%b,so=%b",si,clk,so);
       $dumpfile("waveform.vcd");
       $dumpvars(0,testbench);
-      
-      #5 si=1; 
-      #5 si=0;
-      #5 si=0;
-      #5 si=1;
+      #0 si=1;
+      #1 si=1; 
+      #1 si=0;
+      #1 si=0;
+      #1 si=1;
       #10 $finish;
       
    end

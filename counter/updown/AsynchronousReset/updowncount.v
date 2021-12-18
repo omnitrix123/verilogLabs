@@ -4,8 +4,8 @@ module updowncount(clk,reset,preset,mode,count);
    reg [4:0]count;
    
     
-   always@(*)  
-   //always@(posedge clk or reset or preset)
+   always@(posedge clk|reset|preset) 
+   //always@(posedge clk or reset or preset) is non synth
     begin
      
      if (reset)

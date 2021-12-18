@@ -1,7 +1,6 @@
 module dff(d,clk,q);
    input d,clk;
-   output q,qbar;
-   reg q,qbar;
+   output reg q;
    
    always@(posedge clk)
      begin

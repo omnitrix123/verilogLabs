@@ -1,46 +1,46 @@
 {
   "creator": "Yosys 0.9 (git sha1 1979e0b)",
   "modules": {
-    "updowncount": {
+    "fullsubtractor": {
       "attributes": {
         "top": 1,
-        "src": "updowncount.v:1"
+        "src": "fullsubtractor.v:1"
       },
       "ports": {
-        "clk": {
+        "a": {
           "direction": "input",
           "bits": [ 2 ]
         },
-        "reset": {
+        "b": {
           "direction": "input",
           "bits": [ 3 ]
         },
-        "preset": {
+        "cin": {
           "direction": "input",
           "bits": [ 4 ]
         },
-        "mode": {
-          "direction": "input",
+        "diff": {
+          "direction": "output",
           "bits": [ 5 ]
         },
-        "count": {
+        "borrow": {
           "direction": "output",
-          "bits": [ 6, 7, 8, 9, 10 ]
+          "bits": [ 6 ]
         }
       },
       "cells": {
-        "$add$updowncount.v:16$5": {
+        "$and$fullsubtractor.v:6$4": {
           "hide_name": 1,
-          "type": "$add",
+          "type": "$and",
           "parameters": {
             "A_SIGNED": 0,
-            "A_WIDTH": 5,
+            "A_WIDTH": 1,
             "B_SIGNED": 0,
             "B_WIDTH": 1,
-            "Y_WIDTH": 5
+            "Y_WIDTH": 1
           },
           "attributes": {
-            "src": "updowncount.v:16"
+            "src": "fullsubtractor.v:6"
           },
           "port_directions": {
             "A": "input",
@@ -48,12 +48,80 @@
             "Y": "output"
           },
           "connections": {
-            "A": [ 6, 7, 8, 9, 10 ],
-            "B": [ "1" ],
-            "Y": [ 11, 12, 13, 14, 15 ]
+            "A": [ 7 ],
+            "B": [ 3 ],
+            "Y": [ 8 ]
           }
         },
-        "$or$updowncount.v:7$2": {
+        "$and$fullsubtractor.v:6$5": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "fullsubtractor.v:6"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 3 ],
+            "B": [ 4 ],
+            "Y": [ 9 ]
+          }
+        },
+        "$and$fullsubtractor.v:6$8": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "fullsubtractor.v:6"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 7 ],
+            "B": [ 4 ],
+            "Y": [ 10 ]
+          }
+        },
+        "$not$fullsubtractor.v:6$3": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "fullsubtractor.v:6"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2 ],
+            "Y": [ 7 ]
+          }
+        },
+        "$or$fullsubtractor.v:6$6": {
           "hide_name": 1,
           "type": "$or",
           "parameters": {
@@ -64,7 +132,55 @@
             "Y_WIDTH": 1
           },
           "attributes": {
-            "src": "updowncount.v:7"
+            "src": "fullsubtractor.v:6"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 8 ],
+            "B": [ 9 ],
+            "Y": [ 11 ]
+          }
+        },
+        "$or$fullsubtractor.v:6$9": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "fullsubtractor.v:6"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 11 ],
+            "B": [ 10 ],
+            "Y": [ 6 ]
+          }
+        },
+        "$xor$fullsubtractor.v:5$1": {
+          "hide_name": 1,
+          "type": "$xor",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "fullsubtractor.v:5"
           },
           "port_directions": {
             "A": "input",
@@ -74,12 +190,12 @@
           "connections": {
             "A": [ 2 ],
             "B": [ 3 ],
-            "Y": [ 16 ]
+            "Y": [ 12 ]
           }
         },
-        "$or$updowncount.v:7$3": {
+        "$xor$fullsubtractor.v:5$2": {
           "hide_name": 1,
-          "type": "$or",
+          "type": "$xor",
           "parameters": {
             "A_SIGNED": 0,
             "A_WIDTH": 1,
@@ -88,7 +204,7 @@
             "Y_WIDTH": 1
           },
           "attributes": {
-            "src": "updowncount.v:7"
+            "src": "fullsubtractor.v:5"
           },
           "port_directions": {
             "A": "input",
@@ -96,205 +212,88 @@
             "Y": "output"
           },
           "connections": {
-            "A": [ 16 ],
+            "A": [ 12 ],
             "B": [ 4 ],
-            "Y": [ 17 ]
-          }
-        },
-        "$procdff$19": {
-          "hide_name": 1,
-          "type": "$dff",
-          "parameters": {
-            "CLK_POLARITY": 1,
-            "WIDTH": 5
-          },
-          "attributes": {
-            "src": "updowncount.v:7"
-          },
-          "port_directions": {
-            "CLK": "input",
-            "D": "input",
-            "Q": "output"
-          },
-          "connections": {
-            "CLK": [ 17 ],
-            "D": [ 18, 19, 20, 21, 22 ],
-            "Q": [ 6, 7, 8, 9, 10 ]
-          }
-        },
-        "$procmux$11": {
-          "hide_name": 1,
-          "type": "$mux",
-          "parameters": {
-            "WIDTH": 5
-          },
-          "attributes": {
-            "full_case": 1,
-            "src": "updowncount.v:15"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "S": "input",
-            "Y": "output"
-          },
-          "connections": {
-            "A": [ 23, 24, 25, 26, 27 ],
-            "B": [ 11, 12, 13, 14, 15 ],
-            "S": [ 5 ],
-            "Y": [ 28, 29, 30, 31, 32 ]
-          }
-        },
-        "$procmux$14": {
-          "hide_name": 1,
-          "type": "$mux",
-          "parameters": {
-            "WIDTH": 5
-          },
-          "attributes": {
-            "full_case": 1,
-            "src": "updowncount.v:13"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "S": "input",
-            "Y": "output"
-          },
-          "connections": {
-            "A": [ 28, 29, 30, 31, 32 ],
-            "B": [ "1", "1", "1", "1", "1" ],
-            "S": [ 4 ],
-            "Y": [ 33, 34, 35, 36, 37 ]
-          }
-        },
-        "$procmux$17": {
-          "hide_name": 1,
-          "type": "$mux",
-          "parameters": {
-            "WIDTH": 5
-          },
-          "attributes": {
-            "full_case": 1,
-            "src": "updowncount.v:11"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "S": "input",
-            "Y": "output"
-          },
-          "connections": {
-            "A": [ 33, 34, 35, 36, 37 ],
-            "B": [ "0", "0", "0", "0", "0" ],
-            "S": [ 3 ],
-            "Y": [ 18, 19, 20, 21, 22 ]
-          }
-        },
-        "$sub$updowncount.v:18$7": {
-          "hide_name": 1,
-          "type": "$sub",
-          "parameters": {
-            "A_SIGNED": 0,
-            "A_WIDTH": 5,
-            "B_SIGNED": 0,
-            "B_WIDTH": 1,
-            "Y_WIDTH": 5
-          },
-          "attributes": {
-            "src": "updowncount.v:18"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "Y": "output"
-          },
-          "connections": {
-            "A": [ 6, 7, 8, 9, 10 ],
-            "B": [ "1" ],
-            "Y": [ 23, 24, 25, 26, 27 ]
+            "Y": [ 5 ]
           }
         }
       },
       "netnames": {
-        "$0\\count[4:0]": {
+        "$and$fullsubtractor.v:6$4_Y": {
           "hide_name": 1,
-          "bits": [ 18, 19, 20, 21, 22 ],
+          "bits": [ 8 ],
           "attributes": {
-            "src": "updowncount.v:7"
+            "src": "fullsubtractor.v:6"
           }
         },
-        "$add$updowncount.v:16$5_Y": {
+        "$and$fullsubtractor.v:6$5_Y": {
           "hide_name": 1,
-          "bits": [ 11, 12, 13, 14, 15 ],
+          "bits": [ 9 ],
           "attributes": {
+            "src": "fullsubtractor.v:6"
           }
         },
-        "$or$updowncount.v:7$2_Y": {
+        "$and$fullsubtractor.v:6$8_Y": {
           "hide_name": 1,
-          "bits": [ 16 ],
+          "bits": [ 10 ],
           "attributes": {
-            "src": "updowncount.v:7"
+            "src": "fullsubtractor.v:6"
           }
         },
-        "$or$updowncount.v:7$3_Y": {
+        "$not$fullsubtractor.v:6$3_Y": {
           "hide_name": 1,
-          "bits": [ 17 ],
+          "bits": [ 7 ],
           "attributes": {
-            "src": "updowncount.v:7"
+            "src": "fullsubtractor.v:6"
           }
         },
-        "$procmux$11_Y": {
+        "$or$fullsubtractor.v:6$6_Y": {
           "hide_name": 1,
-          "bits": [ 28, 29, 30, 31, 32 ],
+          "bits": [ 11 ],
           "attributes": {
+            "src": "fullsubtractor.v:6"
           }
         },
-        "$procmux$14_Y": {
+        "$xor$fullsubtractor.v:5$1_Y": {
           "hide_name": 1,
-          "bits": [ 33, 34, 35, 36, 37 ],
+          "bits": [ 12 ],
           "attributes": {
+            "src": "fullsubtractor.v:5"
           }
         },
-        "$procmux$8_Y": {
-          "hide_name": 1,
-          "bits": [ 23, 24, 25, 26, 27 ],
-          "attributes": {
-          }
-        },
-        "clk": {
+        "a": {
           "hide_name": 0,
           "bits": [ 2 ],
           "attributes": {
-            "src": "updowncount.v:2"
+            "src": "fullsubtractor.v:2"
           }
         },
-        "count": {
-          "hide_name": 0,
-          "bits": [ 6, 7, 8, 9, 10 ],
-          "attributes": {
-            "src": "updowncount.v:3"
-          }
-        },
-        "mode": {
-          "hide_name": 0,
-          "bits": [ 5 ],
-          "attributes": {
-            "src": "updowncount.v:2"
-          }
-        },
-        "preset": {
-          "hide_name": 0,
-          "bits": [ 4 ],
-          "attributes": {
-            "src": "updowncount.v:2"
-          }
-        },
-        "reset": {
+        "b": {
           "hide_name": 0,
           "bits": [ 3 ],
           "attributes": {
-            "src": "updowncount.v:2"
+            "src": "fullsubtractor.v:2"
+          }
+        },
+        "borrow": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "fullsubtractor.v:3"
+          }
+        },
+        "cin": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "fullsubtractor.v:2"
+          }
+        },
+        "diff": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "fullsubtractor.v:3"
           }
         }
       }

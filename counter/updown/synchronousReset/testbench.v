@@ -5,7 +5,7 @@ module testbench;
   updowncount D1 (clk,reset,preset,mode,count);
   
   initial clk=0;
-  always clk = #1 ~clk;
+  always clk = #2 ~clk;
   
   initial 
     begin
@@ -14,11 +14,12 @@ module testbench;
      $dumpvars(0,testbench);
 
      
-     #0 reset = 1;
-     #1 reset = 0;
+     #0 reset = 1; preset = 0; mode = 1;
+     #2 reset = 0; preset = 1; mode =0;
      #2 preset=1; mode=0;
-     #1 preset = 0;
-     #40 mode=1;
+     #1 preset = 0; 
+     #10 mode=1;
+     #1 reset =1;
      #50 $finish;
    end
 endmodule

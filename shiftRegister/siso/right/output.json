@@ -1,0 +1,216 @@
+{
+  "creator": "Yosys 0.9 (git sha1 1979e0b)",
+  "modules": {
+    "dff": {
+      "attributes": {
+        "src": "sisorightusingD.v:1"
+      },
+      "ports": {
+        "d": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "clk": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "q": {
+          "direction": "output",
+          "bits": [ 4 ]
+        }
+      },
+      "cells": {
+        "$procdff$2": {
+          "hide_name": 1,
+          "type": "$dff",
+          "parameters": {
+            "CLK_POLARITY": 1,
+            "WIDTH": 1
+          },
+          "attributes": {
+            "src": "sisorightusingD.v:5"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 3 ],
+            "D": [ 2 ],
+            "Q": [ 4 ]
+          }
+        }
+      },
+      "netnames": {
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "sisorightusingD.v:2"
+          }
+        },
+        "d": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "sisorightusingD.v:2"
+          }
+        },
+        "q": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "sisorightusingD.v:3"
+          }
+        }
+      }
+    },
+    "sisoright": {
+      "attributes": {
+        "top": 1,
+        "src": "sisorightusingD.v:12"
+      },
+      "ports": {
+        "si": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "clk": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "so": {
+          "direction": "output",
+          "bits": [ 4 ]
+        }
+      },
+      "cells": {
+        "D0": {
+          "hide_name": 0,
+          "type": "dff",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "sisorightusingD.v:21"
+          },
+          "port_directions": {
+            "clk": "input",
+            "d": "input",
+            "q": "output"
+          },
+          "connections": {
+            "clk": [ 3 ],
+            "d": [ 5 ],
+            "q": [ 4 ]
+          }
+        },
+        "D1": {
+          "hide_name": 0,
+          "type": "dff",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "sisorightusingD.v:20"
+          },
+          "port_directions": {
+            "clk": "input",
+            "d": "input",
+            "q": "output"
+          },
+          "connections": {
+            "clk": [ 3 ],
+            "d": [ 6 ],
+            "q": [ 5 ]
+          }
+        },
+        "D2": {
+          "hide_name": 0,
+          "type": "dff",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "sisorightusingD.v:19"
+          },
+          "port_directions": {
+            "clk": "input",
+            "d": "input",
+            "q": "output"
+          },
+          "connections": {
+            "clk": [ 3 ],
+            "d": [ 7 ],
+            "q": [ 6 ]
+          }
+        },
+        "D3": {
+          "hide_name": 0,
+          "type": "dff",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "sisorightusingD.v:18"
+          },
+          "port_directions": {
+            "clk": "input",
+            "d": "input",
+            "q": "output"
+          },
+          "connections": {
+            "clk": [ 3 ],
+            "d": [ 2 ],
+            "q": [ 7 ]
+          }
+        }
+      },
+      "netnames": {
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "sisorightusingD.v:13"
+          }
+        },
+        "q1": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "sisorightusingD.v:15"
+          }
+        },
+        "q2": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "sisorightusingD.v:15"
+          }
+        },
+        "q3": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "src": "sisorightusingD.v:15"
+          }
+        },
+        "si": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "sisorightusingD.v:13"
+          }
+        },
+        "so": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "sisorightusingD.v:14"
+          }
+        }
+      }
+    }
+  }
+}

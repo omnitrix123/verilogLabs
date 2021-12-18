@@ -1,0 +1,59 @@
+$date
+	Thu Dec 16 10:59:19 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module testbench $end
+$var wire 4 ! out [3:0] $end
+$var reg 1 " clk $end
+$var reg 1 # in $end
+$scope module P1 $end
+$var wire 1 " clk $end
+$var wire 1 # in $end
+$var reg 4 $ out [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx $
+1#
+0"
+bx !
+$end
+#1
+bx1 !
+bx1 $
+1"
+#2
+0"
+0#
+#3
+bx10 !
+bx10 $
+1"
+#4
+0"
+#5
+bx100 !
+bx100 $
+1"
+#6
+0"
+1#
+#7
+b1001 !
+b1001 $
+1"
+#8
+0"
+#9
+b11 !
+b11 $
+1"
+#10
+0"
